@@ -1,0 +1,6 @@
+Shop项目SVN地址：svn://svn.etouch.vip/etouch.shop
+
+Erp项目SVN地址：svn://svn.etouch.vip/etouch.erp.php
+
+Tbg项目SVN地址：svn://svn.etouch.vip/etouch.admin
+sagdsagdsag
