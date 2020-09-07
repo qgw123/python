@@ -52,5 +52,5 @@ r2.got_shot() #Role.got_shot(r2)
 
 Role.n = "ABC"
 print(Role.n_list)
-
+print(Role.n)
 print(r1.n ,r2.n )
