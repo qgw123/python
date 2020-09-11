@@ -7,7 +7,7 @@ channel = connection.channel()
 
 channel.queue_declare(queue='hello')
 
-def callback(ch, method, properties, body):
+def callback(ch, method, properties, body): #回调函数
     # print('--->',ch, method, properties)
     print('[x] Received %r' % body)
 
