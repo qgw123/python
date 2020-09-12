@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Python之路,Day9 - 异步IO\数据库\队列\缓存 - 金角大王 - 博客园</title>
-    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=7Pwqzj5EBy4dBv4DJNI181rFKP8_OF0hT7jO3o8jAa0" />
     <link id="MainCss" rel="stylesheet" href="/skins/simpleblue/bundle-simpleblue.min.css?v=A3b2aPJdyRz0wsOsfRnhl-bqaa45nYsYwvEqo53RYFs" />
@@ -88,7 +88,7 @@ Chaos is a ladder.
 64&nbsp;</span>
 <!-- <span id="stats-comment_count"></span> -->
 <span id="stats_comment_count">评论 - 
-931</span>
+932</span>
             </div>
         </div>
     </div>
@@ -152,8 +152,8 @@ Chaos is a ladder.
 <li>进行阻塞（Blocking）操作（如IO时）会阻塞掉整个程序</li>
 </ul>
 <p>使用yield实现协程操作例子　　　　</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">import time
+<div>
+<pre>import time
 import queue
 def consumer(name):
     print("---&gt;starting eating baozi...")
@@ -191,8 +191,8 @@ if __name__ == '__main__':
 <p>&nbsp;</p>
 <h3>Greenlet</h3>
 <p>greenlet是一个用C实现的协程模块，相比与python自带的yield，它可以使你在任意函数之间随意切换，而不需把这个函数先声明为generator</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;"># -*- coding:utf-8 -*-
+<div>
+<pre># -*- coding:utf-8 -*-
 
 
 from greenlet import greenlet
@@ -223,8 +223,8 @@ gr1.switch()
 <p>　　</p>
 <h3>Gevent&nbsp;</h3>
 <p>Gevent 是一个第三方库，可以轻松通过gevent实现并发同步或异步编程，在gevent中用到的主要模式是<strong>Greenlet</strong>, 它是以C扩展模块形式接入Python的轻量级协程。 Greenlet全部运行在主程序操作系统进程的内部，但它们被协作式地调度。</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">import gevent
+<div>
+<pre>import gevent
 
 def func1():
     print('\033[31;1m李闯在跟海涛搞...\033[0m')
@@ -247,11 +247,11 @@ gevent.joinall([
 <p>　　</p>
 <p>&nbsp;</p>
 <p>输出：</p>
-<p><span style="color: #888888;">李闯在跟海涛搞...</span><br /><span style="color: #888888;">李闯切换到了跟海龙搞...</span><br /><span style="color: #888888;">李闯搞完了海涛，回来继续跟海龙搞...</span><br /><span style="color: #888888;">李闯又回去跟继续跟海涛搞...</span></p>
+<p><span style="color: rgba(136, 136, 136, 1)">李闯在跟海涛搞...</span><br><span style="color: rgba(136, 136, 136, 1)">李闯切换到了跟海龙搞...</span><br><span style="color: rgba(136, 136, 136, 1)">李闯搞完了海涛，回来继续跟海龙搞...</span><br><span style="color: rgba(136, 136, 136, 1)">李闯又回去跟继续跟海涛搞...</span></p>
 <p>&nbsp;</p>
 <p><strong>同步与异步的性能区别&nbsp;</strong></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">import gevent
+<div>
+<pre>import gevent
 
 def task(pid):
     """
@@ -277,8 +277,8 @@ asynchronous()
 </div>
 <p>上面程序的重要部分是将task函数封装到Greenlet内部线程的<code>gevent.spawn</code>。 初始化的greenlet列表存放在数组<code>threads</code>中，此数组被传给<code>gevent.joinall</code>&nbsp;函数，后者阻塞当前流程，并执行所有给定的greenlet。执行流程只会在 所有greenlet执行完后才会继续向下走。　　</p>
 <p><strong>遇到IO阻塞时会自动切换任务</strong></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">from gevent import monkey; monkey.patch_all()
+<div>
+<pre>from gevent import monkey; monkey.patch_all()
 import gevent
 from  urllib.request import urlopen
 
@@ -297,8 +297,8 @@ gevent.joinall([
 <p>&nbsp;</p>
 <p><strong>通过gevent实现单线程下的多socket并发</strong></p>
 <p><strong>server side&nbsp;</strong></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">import sys
+<div>
+<pre>import sys
 import socket
 import time
 import gevent
@@ -336,8 +336,8 @@ if __name__ == '__main__':
 </div>
 <p>　　</p>
 <p><strong>client side 　　</strong></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">import socket
+<div>
+<pre>import socket
 
 HOST = 'localhost'    # The remote host
 PORT = 8001           # The same port as used by the server
@@ -353,64 +353,64 @@ while True:
 s.close()
 </pre>
 </div>
-<div class="cnblogs_code" onclick="cnblogs_code_show('5c70bd4c-c5b9-4cb2-ba3e-96823f14c00d')"><img id="code_img_closed_5c70bd4c-c5b9-4cb2-ba3e-96823f14c00d" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_5c70bd4c-c5b9-4cb2-ba3e-96823f14c00d" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('5c70bd4c-c5b9-4cb2-ba3e-96823f14c00d',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
-<div id="cnblogs_code_open_5c70bd4c-c5b9-4cb2-ba3e-96823f14c00d" class="cnblogs_code_hide">
-<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> socket
-</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> threading
+<div><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div>
+<pre><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> socket
+</span><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> threading
 
-</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> sock_conn():
+</span><span style="color: rgba(0, 0, 255, 1)">def</span><span style="color: rgba(0, 0, 0, 1)"> sock_conn():
 
-    client </span>=<span style="color: #000000;"> socket.socket()
+    client </span>=<span style="color: rgba(0, 0, 0, 1)"> socket.socket()
 
-    client.connect((</span><span style="color: #800000;">"</span><span style="color: #800000;">localhost</span><span style="color: #800000;">"</span>,8001<span style="color: #000000;">))
-    count </span>=<span style="color: #000000;"> 0
-    </span><span style="color: #0000ff;">while</span><span style="color: #000000;"> True:
-        </span><span style="color: #008000;">#</span><span style="color: #008000;">msg = input("&gt;&gt;:").strip()</span>
-        <span style="color: #008000;">#</span><span style="color: #008000;">if len(msg) == 0:continue</span>
-        client.send( (<span style="color: #800000;">"</span><span style="color: #800000;">hello %s</span><span style="color: #800000;">"</span> %count).encode(<span style="color: #800000;">"</span><span style="color: #800000;">utf-8</span><span style="color: #800000;">"</span><span style="color: #000000;">))
+    client.connect((</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">localhost</span><span style="color: rgba(128, 0, 0, 1)">"</span>,8001<span style="color: rgba(0, 0, 0, 1)">))
+    count </span>=<span style="color: rgba(0, 0, 0, 1)"> 0
+    </span><span style="color: rgba(0, 0, 255, 1)">while</span><span style="color: rgba(0, 0, 0, 1)"> True:
+        </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">msg = input("&gt;&gt;:").strip()</span>
+        <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">if len(msg) == 0:continue</span>
+        client.send( (<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">hello %s</span><span style="color: rgba(128, 0, 0, 1)">"</span> %count).encode(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">utf-8</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">))
 
-        data </span>= client.recv(1024<span style="color: #000000;">)
+        data </span>= client.recv(1024<span style="color: rgba(0, 0, 0, 1)">)
 
-        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">[%s]recv from server:</span><span style="color: #800000;">"</span> % threading.get_ident(),data.decode()) <span style="color: #008000;">#</span><span style="color: #008000;">结果</span>
-        count +=1<span style="color: #000000;">
+        </span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">[%s]recv from server:</span><span style="color: rgba(128, 0, 0, 1)">"</span> % threading.get_ident(),data.decode()) <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">结果</span>
+        count +=1<span style="color: rgba(0, 0, 0, 1)">
     client.close()
 
 
-</span><span style="color: #0000ff;">for</span> i <span style="color: #0000ff;">in</span> range(100<span style="color: #000000;">):
-    t </span>= threading.Thread(target=<span style="color: #000000;">sock_conn)
+</span><span style="color: rgba(0, 0, 255, 1)">for</span> i <span style="color: rgba(0, 0, 255, 1)">in</span> range(100<span style="color: rgba(0, 0, 0, 1)">):
+    t </span>= threading.Thread(target=<span style="color: rgba(0, 0, 0, 1)">sock_conn)
     t.start()</span></pre>
 </div>
-<span class="cnblogs_code_collapse">并发100个sock连接</span></div>
+<span>并发100个sock连接</span></div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>　　</p>
 <h3>论事件驱动与异步IO</h3>
-<div class="para">通常，我们写服务器处理模型的程序时，有以下几种模型：</div>
-<div class="para">（1）每收到一个请求，创建一个新的进程，来处理该请求；</div>
-<div class="para">（2）每收到一个请求，创建一个新的线程，来处理该请求；</div>
-<div class="para">（3）每收到一个请求，放入一个事件列表，让主进程通过非阻塞I/O方式来处理请求</div>
-<div class="para">上面的几种方式，各有千秋，</div>
-<div class="para">第（1）中方法，由于创建新的进程的开销比较大，所以，会导致服务器性能比较差,但实现比较简单。</div>
-<div class="para">第（2）种方式，由于要涉及到线程的同步，有可能会面临<a href="http://baike.baidu.com/subview/121723/121723.htm" target="_blank" data-lemmaid="2196938">死锁</a>等问题。</div>
-<div class="para">第（3）种方式，在写应用程序代码时，逻辑比前面两种都复杂。</div>
-<div class="para">综合考虑各方面因素，一般普遍认为第（3）种方式是大多数<a href="http://baike.baidu.com/view/813.htm" target="_blank">网络服务器</a>采用的方式</div>
-<div class="para">&nbsp;</div>
-<h4 class="para">看图说话讲事件驱动模型</h4>
-<p>在UI编程中，常常要对鼠标点击进行相应，首先如何获得鼠标点击呢？<br /><strong>方式一：创建一个线程，该线程一直循环检测是否有鼠标点击，那么这个方式有以下几个缺点</strong>：<br />1. CPU资源浪费，可能鼠标点击的频率非常小，但是扫描线程还是会一直循环检测，这会造成很多的CPU资源浪费；如果扫描鼠标点击的接口是阻塞的呢？<br />2. 如果是堵塞的，又会出现下面这样的问题，如果我们不但要扫描鼠标点击，还要扫描键盘是否按下，由于扫描鼠标时被堵塞了，那么可能永远不会去扫描键盘；<br />3. 如果一个循环需要扫描的设备非常多，这又会引来响应时间的问题；<br />所以，该方式是非常不好的。<br /><br /><strong>方式二：就是事件驱动模型</strong><br />目前大部分的UI编程都是事件驱动模型，如很多UI平台都会提供onClick()事件，这个事件就代表鼠标按下事件。事件驱动模型大体思路如下：<br />1. 有一个事件（消息）队列；<br />2. 鼠标按下时，往这个队列中增加一个点击事件（消息）；<br />3. 有个循环，不断从队列取出事件，根据不同的事件，调用不同的函数，如onClick()、onKeyDown()等；<br />4. 事件（消息）一般都各自保存各自的处理函数指针，这样，每个消息都有独立的处理函数；</p>
-<p><img src="https://images2015.cnblogs.com/blog/720333/201609/720333-20160922162036496-1642863922.png" alt="" width="674" height="378" /></p>
+<div>通常，我们写服务器处理模型的程序时，有以下几种模型：</div>
+<div>（1）每收到一个请求，创建一个新的进程，来处理该请求；</div>
+<div>（2）每收到一个请求，创建一个新的线程，来处理该请求；</div>
+<div>（3）每收到一个请求，放入一个事件列表，让主进程通过非阻塞I/O方式来处理请求</div>
+<div>上面的几种方式，各有千秋，</div>
+<div>第（1）中方法，由于创建新的进程的开销比较大，所以，会导致服务器性能比较差,但实现比较简单。</div>
+<div>第（2）种方式，由于要涉及到线程的同步，有可能会面临<a href="http://baike.baidu.com/subview/121723/121723.htm" target="_blank">死锁</a>等问题。</div>
+<div>第（3）种方式，在写应用程序代码时，逻辑比前面两种都复杂。</div>
+<div>综合考虑各方面因素，一般普遍认为第（3）种方式是大多数<a href="http://baike.baidu.com/view/813.htm" target="_blank">网络服务器</a>采用的方式</div>
+<div>&nbsp;</div>
+<h4>看图说话讲事件驱动模型</h4>
+<p>在UI编程中，常常要对鼠标点击进行相应，首先如何获得鼠标点击呢？<br><strong>方式一：创建一个线程，该线程一直循环检测是否有鼠标点击，那么这个方式有以下几个缺点</strong>：<br>1. CPU资源浪费，可能鼠标点击的频率非常小，但是扫描线程还是会一直循环检测，这会造成很多的CPU资源浪费；如果扫描鼠标点击的接口是阻塞的呢？<br>2. 如果是堵塞的，又会出现下面这样的问题，如果我们不但要扫描鼠标点击，还要扫描键盘是否按下，由于扫描鼠标时被堵塞了，那么可能永远不会去扫描键盘；<br>3. 如果一个循环需要扫描的设备非常多，这又会引来响应时间的问题；<br>所以，该方式是非常不好的。<br><br><strong>方式二：就是事件驱动模型</strong><br>目前大部分的UI编程都是事件驱动模型，如很多UI平台都会提供onClick()事件，这个事件就代表鼠标按下事件。事件驱动模型大体思路如下：<br>1. 有一个事件（消息）队列；<br>2. 鼠标按下时，往这个队列中增加一个点击事件（消息）；<br>3. 有个循环，不断从队列取出事件，根据不同的事件，调用不同的函数，如onClick()、onKeyDown()等；<br>4. 事件（消息）一般都各自保存各自的处理函数指针，这样，每个消息都有独立的处理函数；</p>
+<p><img src="https://images2015.cnblogs.com/blog/720333/201609/720333-20160922162036496-1642863922.png" alt="" width="674" height="378"></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<div class="para">&nbsp;</div>
+<div>&nbsp;</div>
 <p>事件驱动编程是一种编程范式，这里程序的执行流由外部事件来决定。它的特点是包含一个事件循环，当外部事件发生时使用回调机制来触发相应的处理。另外两种常见的编程范式是（单线程）同步以及多线程编程。</p>
 <p>让我们用例子来比较和对比一下单线程、多线程以及事件驱动编程模型。下图展示了随着时间的推移，这三种模式下程序所做的工作。这个程序有3个任务需要完成，每个任务都在等待I/O操作时阻塞自身。阻塞在I/O操作上所花费的时间已经用灰色框标示出来了。</p>
-<p>&nbsp;<img src="http://www.aosabook.org/images/twisted/threading_models.png" alt="" width="1166" height="838" /></p>
+<p>&nbsp;<img src="http://www.aosabook.org/images/twisted/threading_models.png" alt="" width="1166" height="838"></p>
 <p>在单线程同步模型中，任务按照顺序执行。如果某个任务因为I/O而阻塞，其他所有的任务都必须等待，直到它完成之后它们才能依次执行。这种明确的执行顺序和串行化处理的行为是很容易推断得出的。如果任务之间并没有互相依赖的关系，但仍然需要互相等待的话这就使得程序不必要的降低了运行速度。</p>
 <p>在多线程版本中，这3个任务分别在独立的线程中执行。这些线程由操作系统来管理，在多处理器系统上可以并行处理，或者在单处理器系统上交错执行。这使得当某个线程阻塞在某个资源的同时其他线程得以继续执行。与完成类似功能的同步程序相比，这种方式更有效率，但程序员必须写代码来保护共享资源，防止其被多个线程同时访问。多线程程序更加难以推断，因为这类程序不得不通过线程同步机制如锁、可重入函数、线程局部存储或者其他机制来处理线程安全问题，如果实现不当就会导致出现微妙且令人痛不欲生的bug。</p>
 <p>在事件驱动版本的程序中，3个任务交错执行，但仍然在一个单独的线程控制中。当处理I/O或者其他昂贵的操作时，注册一个回调到事件循环中，然后当I/O操作完成时继续执行。回调描述了该如何处理某个事件。事件循环轮询所有的事件，当事件到来时将它们分配给等待处理事件的回调函数。这种方式让程序尽可能的得以执行而不需要用到额外的线程。事件驱动型程序比多线程程序更容易推断出行为，因为程序员不需要关心线程安全问题。</p>
 <p>当我们面对如下的环境时，事件驱动模型通常是一个好的选择：</p>
 <ol>
-<li>程序中有许多任务，而且&hellip;</li>
-<li>任务之间高度独立（因此它们不需要互相通信，或者等待彼此）而且&hellip;</li>
+<li>程序中有许多任务，而且…</li>
+<li>任务之间高度独立（因此它们不需要互相通信，或者等待彼此）而且…</li>
 <li>在等待事件到来时，某些任务会阻塞。</li>
 
 
@@ -429,149 +429,149 @@ s.close()
 <p>当应用程序需要在任务间共享可变的数据时，这也是一个不错的选择，因为这里不需要采用同步处理。</p>
 <p>网络应用程序通常都有上述这些特点，这使得它们能够很好的契合事件驱动编程模型。</p>
 <p>&nbsp;</p>
-<p><span style="color: #ff0000;"><strong>此处要提出一个问题，就是，上面的事件驱动模型中，只要一遇到IO就注册一个事件，然后主程序就可以继续干其它的事情了，只到io处理完毕后，继续恢复之前中断的任务，这本质上是怎么实现的呢？哈哈，下面我们就来一起揭开这神秘的面纱。。。。</strong></span></p>
+<p><span style="color: rgba(255, 0, 0, 1)"><strong>此处要提出一个问题，就是，上面的事件驱动模型中，只要一遇到IO就注册一个事件，然后主程序就可以继续干其它的事情了，只到io处理完毕后，继续恢复之前中断的任务，这本质上是怎么实现的呢？哈哈，下面我们就来一起揭开这神秘的面纱。。。。</strong></span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <h2><strong>Select\Poll\Epoll异步IO　</strong></h2>
 <p><strong>http://www.cnblogs.com/alex3714/p/4372426.html　</strong></p>
 <p>番外篇 http://www.cnblogs.com/alex3714/articles/5876749.html&nbsp;</p>
 <h4>select 多并发socket 例子</h4>
-<div class="cnblogs_code" onclick="cnblogs_code_show('f2d0678c-895f-42e6-8768-7b071f5889f0')"><img id="code_img_closed_f2d0678c-895f-42e6-8768-7b071f5889f0" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_f2d0678c-895f-42e6-8768-7b071f5889f0" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('f2d0678c-895f-42e6-8768-7b071f5889f0',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
-<div id="cnblogs_code_open_f2d0678c-895f-42e6-8768-7b071f5889f0" class="cnblogs_code_hide">
-<pre><span style="color: #008000;">#</span><span style="color: #008000;">_*_coding:utf-8_*_</span>
-<span style="color: #800080;">__author__</span> = <span style="color: #800000;">'</span><span style="color: #800000;">Alex Li</span><span style="color: #800000;">'</span>
+<div><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div>
+<pre><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">_*_coding:utf-8_*_</span>
+<span style="color: rgba(128, 0, 128, 1)">__author__</span> = <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">Alex Li</span><span style="color: rgba(128, 0, 0, 1)">'</span>
 
-<span style="color: #0000ff;">import</span><span style="color: #000000;"> select
-</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> socket
-</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> sys
-</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> queue
+<span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> select
+</span><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> socket
+</span><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> sys
+</span><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> queue
 
 
-server </span>=<span style="color: #000000;"> socket.socket()
+server </span>=<span style="color: rgba(0, 0, 0, 1)"> socket.socket()
 server.setblocking(0)
 
-server_addr </span>= (<span style="color: #800000;">'</span><span style="color: #800000;">localhost</span><span style="color: #800000;">'</span>,10000<span style="color: #000000;">)
+server_addr </span>= (<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">localhost</span><span style="color: rgba(128, 0, 0, 1)">'</span>,10000<span style="color: rgba(0, 0, 0, 1)">)
 
-</span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">starting up on %s port %s</span><span style="color: #800000;">'</span> %<span style="color: #000000;"> server_addr)
+</span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">starting up on %s port %s</span><span style="color: rgba(128, 0, 0, 1)">'</span> %<span style="color: rgba(0, 0, 0, 1)"> server_addr)
 server.bind(server_addr)
 
-server.listen(</span>5<span style="color: #000000;">)
+server.listen(</span>5<span style="color: rgba(0, 0, 0, 1)">)
 
 
-inputs </span>= [server, ] <span style="color: #008000;">#</span><span style="color: #008000;">自己也要监测呀,因为server本身也是个fd</span>
-outputs =<span style="color: #000000;"> []
+inputs </span>= [server, ] <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">自己也要监测呀,因为server本身也是个fd</span>
+outputs =<span style="color: rgba(0, 0, 0, 1)"> []
 
-message_queues </span>=<span style="color: #000000;"> {}
+message_queues </span>=<span style="color: rgba(0, 0, 0, 1)"> {}
 
-</span><span style="color: #0000ff;">while</span><span style="color: #000000;"> True:
-    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">waiting for next event...</span><span style="color: #800000;">"</span><span style="color: #000000;">)
+</span><span style="color: rgba(0, 0, 255, 1)">while</span><span style="color: rgba(0, 0, 0, 1)"> True:
+    </span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">waiting for next event...</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">)
 
-    readable, writeable, exeptional </span>= select.select(inputs,outputs,inputs) <span style="color: #008000;">#</span><span style="color: #008000;">如果没有任何fd就绪,那程序就会一直阻塞在这里</span>
+    readable, writeable, exeptional </span>= select.select(inputs,outputs,inputs) <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">如果没有任何fd就绪,那程序就会一直阻塞在这里</span>
 
-    <span style="color: #0000ff;">for</span> s <span style="color: #0000ff;">in</span> readable: <span style="color: #008000;">#</span><span style="color: #008000;">每个s就是一个socket</span>
+    <span style="color: rgba(0, 0, 255, 1)">for</span> s <span style="color: rgba(0, 0, 255, 1)">in</span> readable: <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">每个s就是一个socket</span>
 
-        <span style="color: #0000ff;">if</span> s <span style="color: #0000ff;">is</span> server: <span style="color: #008000;">#</span><span style="color: #008000;">别忘记,上面我们server自己也当做一个fd放在了inputs列表里,传给了select,如果这个s是server,代表server这个fd就绪了,</span>
-            <span style="color: #008000;">#</span><span style="color: #008000;">就是有活动了, 什么情况下它才有活动? 当然 是有新连接进来的时候 呀</span>
-            <span style="color: #008000;">#</span><span style="color: #008000;">新连接进来了,接受这个连接</span>
-            conn, client_addr =<span style="color: #000000;"> s.accept()
-            </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">new connection from</span><span style="color: #800000;">"</span><span style="color: #000000;">,client_addr)
+        <span style="color: rgba(0, 0, 255, 1)">if</span> s <span style="color: rgba(0, 0, 255, 1)">is</span> server: <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">别忘记,上面我们server自己也当做一个fd放在了inputs列表里,传给了select,如果这个s是server,代表server这个fd就绪了,</span>
+            <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">就是有活动了, 什么情况下它才有活动? 当然 是有新连接进来的时候 呀</span>
+            <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">新连接进来了,接受这个连接</span>
+            conn, client_addr =<span style="color: rgba(0, 0, 0, 1)"> s.accept()
+            </span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">new connection from</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">,client_addr)
             conn.setblocking(0)
-            inputs.append(conn) </span><span style="color: #008000;">#</span><span style="color: #008000;">为了不阻塞整个程序,我们不会立刻在这里开始接收客户端发来的数据, 把它放到inputs里, 下一次loop时,这个新连接</span>
-            <span style="color: #008000;">#</span><span style="color: #008000;">就会被交给select去监听,如果这个连接的客户端发来了数据 ,那这个连接的fd在server端就会变成就续的,select就会把这个连接返回,返回到</span>
-            <span style="color: #008000;">#</span><span style="color: #008000;">readable 列表里,然后你就可以loop readable列表,取出这个连接,开始接收数据了, 下面就是这么干 的</span>
-<span style="color: #000000;">
-            message_queues[conn] </span>= queue.Queue() <span style="color: #008000;">#</span><span style="color: #008000;">接收到客户端的数据后,不立刻返回 ,暂存在队列里,以后发送</span>
+            inputs.append(conn) </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">为了不阻塞整个程序,我们不会立刻在这里开始接收客户端发来的数据, 把它放到inputs里, 下一次loop时,这个新连接</span>
+            <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">就会被交给select去监听,如果这个连接的客户端发来了数据 ,那这个连接的fd在server端就会变成就续的,select就会把这个连接返回,返回到</span>
+            <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">readable 列表里,然后你就可以loop readable列表,取出这个连接,开始接收数据了, 下面就是这么干 的</span>
+<span style="color: rgba(0, 0, 0, 1)">
+            message_queues[conn] </span>= queue.Queue() <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">接收到客户端的数据后,不立刻返回 ,暂存在队列里,以后发送</span>
 
-        <span style="color: #0000ff;">else</span>: <span style="color: #008000;">#</span><span style="color: #008000;">s不是server的话,那就只能是一个 与客户端建立的连接的fd了</span>
-            <span style="color: #008000;">#</span><span style="color: #008000;">客户端的数据过来了,在这接收</span>
-            data = s.recv(1024<span style="color: #000000;">)
-            </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> data:
-                </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">收到来自[%s]的数据:</span><span style="color: #800000;">"</span> %<span style="color: #000000;"> s.getpeername()[0], data)
-                message_queues[s].put(data) </span><span style="color: #008000;">#</span><span style="color: #008000;">收到的数据先放到queue里,一会返回给客户端</span>
-                <span style="color: #0000ff;">if</span> s <span style="color: #0000ff;">not</span>  <span style="color: #0000ff;">in</span><span style="color: #000000;"> outputs:
-                    outputs.append(s) </span><span style="color: #008000;">#</span><span style="color: #008000;">为了不影响处理与其它客户端的连接 , 这里不立刻返回数据给客户端</span>
-
-
-            <span style="color: #0000ff;">else</span>:<span style="color: #008000;">#</span><span style="color: #008000;">如果收不到data代表什么呢? 代表客户端断开了呀</span>
-                <span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">客户端断开了</span><span style="color: #800000;">"</span><span style="color: #000000;">,s)
-
-                </span><span style="color: #0000ff;">if</span> s <span style="color: #0000ff;">in</span><span style="color: #000000;"> outputs:
-                    outputs.remove(s) </span><span style="color: #008000;">#</span><span style="color: #008000;">清理已断开的连接</span>
-<span style="color: #000000;">
-                inputs.remove(s) </span><span style="color: #008000;">#</span><span style="color: #008000;">清理已断开的连接</span>
-
-                <span style="color: #0000ff;">del</span> message_queues[s] <span style="color: #008000;">#</span><span style="color: #008000;">#清理已断开的连接</span>
+        <span style="color: rgba(0, 0, 255, 1)">else</span>: <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">s不是server的话,那就只能是一个 与客户端建立的连接的fd了</span>
+            <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">客户端的数据过来了,在这接收</span>
+            data = s.recv(1024<span style="color: rgba(0, 0, 0, 1)">)
+            </span><span style="color: rgba(0, 0, 255, 1)">if</span><span style="color: rgba(0, 0, 0, 1)"> data:
+                </span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">收到来自[%s]的数据:</span><span style="color: rgba(128, 0, 0, 1)">"</span> %<span style="color: rgba(0, 0, 0, 1)"> s.getpeername()[0], data)
+                message_queues[s].put(data) </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">收到的数据先放到queue里,一会返回给客户端</span>
+                <span style="color: rgba(0, 0, 255, 1)">if</span> s <span style="color: rgba(0, 0, 255, 1)">not</span>  <span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> outputs:
+                    outputs.append(s) </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">为了不影响处理与其它客户端的连接 , 这里不立刻返回数据给客户端</span>
 
 
-    <span style="color: #0000ff;">for</span> s <span style="color: #0000ff;">in</span><span style="color: #000000;"> writeable:
-        </span><span style="color: #0000ff;">try</span><span style="color: #000000;"> :
-            next_msg </span>=<span style="color: #000000;"> message_queues[s].get_nowait()
+            <span style="color: rgba(0, 0, 255, 1)">else</span>:<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">如果收不到data代表什么呢? 代表客户端断开了呀</span>
+                <span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">客户端断开了</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">,s)
 
-        </span><span style="color: #0000ff;">except</span><span style="color: #000000;"> queue.Empty:
-            </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">client [%s]</span><span style="color: #800000;">"</span> %s.getpeername()[0], <span style="color: #800000;">"</span><span style="color: #800000;">queue is empty..</span><span style="color: #800000;">"</span><span style="color: #000000;">)
+                </span><span style="color: rgba(0, 0, 255, 1)">if</span> s <span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> outputs:
+                    outputs.remove(s) </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">清理已断开的连接</span>
+<span style="color: rgba(0, 0, 0, 1)">
+                inputs.remove(s) </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">清理已断开的连接</span>
+
+                <span style="color: rgba(0, 0, 255, 1)">del</span> message_queues[s] <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">#清理已断开的连接</span>
+
+
+    <span style="color: rgba(0, 0, 255, 1)">for</span> s <span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> writeable:
+        </span><span style="color: rgba(0, 0, 255, 1)">try</span><span style="color: rgba(0, 0, 0, 1)"> :
+            next_msg </span>=<span style="color: rgba(0, 0, 0, 1)"> message_queues[s].get_nowait()
+
+        </span><span style="color: rgba(0, 0, 255, 1)">except</span><span style="color: rgba(0, 0, 0, 1)"> queue.Empty:
+            </span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">client [%s]</span><span style="color: rgba(128, 0, 0, 1)">"</span> %s.getpeername()[0], <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">queue is empty..</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">)
             outputs.remove(s)
 
-        </span><span style="color: #0000ff;">else</span><span style="color: #000000;">:
-            </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">sending msg to [%s]</span><span style="color: #800000;">"</span>%<span style="color: #000000;">s.getpeername()[0], next_msg)
+        </span><span style="color: rgba(0, 0, 255, 1)">else</span><span style="color: rgba(0, 0, 0, 1)">:
+            </span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">sending msg to [%s]</span><span style="color: rgba(128, 0, 0, 1)">"</span>%<span style="color: rgba(0, 0, 0, 1)">s.getpeername()[0], next_msg)
             s.send(next_msg.upper())
 
 
-    </span><span style="color: #0000ff;">for</span> s <span style="color: #0000ff;">in</span><span style="color: #000000;"> exeptional:
-        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">handling exception for </span><span style="color: #800000;">"</span><span style="color: #000000;">,s.getpeername())
+    </span><span style="color: rgba(0, 0, 255, 1)">for</span> s <span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> exeptional:
+        </span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">handling exception for </span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">,s.getpeername())
         inputs.remove(s)
-        </span><span style="color: #0000ff;">if</span> s <span style="color: #0000ff;">in</span><span style="color: #000000;"> outputs:
+        </span><span style="color: rgba(0, 0, 255, 1)">if</span> s <span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> outputs:
             outputs.remove(s)
         s.close()
 
-        </span><span style="color: #0000ff;">del</span> message_queues[s]</pre>
+        </span><span style="color: rgba(0, 0, 255, 1)">del</span> message_queues[s]</pre>
 </div>
-<span class="cnblogs_code_collapse">select socket server</span></div>
-<div class="cnblogs_code" onclick="cnblogs_code_show('e2e94a36-aa6f-4cd9-bb30-a0c8980ed963')"><img id="code_img_closed_e2e94a36-aa6f-4cd9-bb30-a0c8980ed963" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_e2e94a36-aa6f-4cd9-bb30-a0c8980ed963" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('e2e94a36-aa6f-4cd9-bb30-a0c8980ed963',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
-<div id="cnblogs_code_open_e2e94a36-aa6f-4cd9-bb30-a0c8980ed963" class="cnblogs_code_hide">
-<pre><span style="color: #008000;">#</span><span style="color: #008000;">_*_coding:utf-8_*_</span>
-<span style="color: #800080;">__author__</span> = <span style="color: #800000;">'</span><span style="color: #800000;">Alex Li</span><span style="color: #800000;">'</span>
+<span>select socket server</span></div>
+<div><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div>
+<pre><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">_*_coding:utf-8_*_</span>
+<span style="color: rgba(128, 0, 128, 1)">__author__</span> = <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">Alex Li</span><span style="color: rgba(128, 0, 0, 1)">'</span>
 
 
-<span style="color: #0000ff;">import</span><span style="color: #000000;"> socket
-</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> sys
+<span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> socket
+</span><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> sys
 
-messages </span>= [ b<span style="color: #800000;">'</span><span style="color: #800000;">This is the message. </span><span style="color: #800000;">'</span><span style="color: #000000;">,
-             b</span><span style="color: #800000;">'</span><span style="color: #800000;">It will be sent </span><span style="color: #800000;">'</span><span style="color: #000000;">,
-             b</span><span style="color: #800000;">'</span><span style="color: #800000;">in parts.</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+messages </span>= [ b<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">This is the message. </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">,
+             b</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">It will be sent </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">,
+             b</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">in parts.</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">,
              ]
-server_address </span>= (<span style="color: #800000;">'</span><span style="color: #800000;">localhost</span><span style="color: #800000;">'</span>, 10000<span style="color: #000000;">)
+server_address </span>= (<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">localhost</span><span style="color: rgba(128, 0, 0, 1)">'</span>, 10000<span style="color: rgba(0, 0, 0, 1)">)
 
-</span><span style="color: #008000;">#</span><span style="color: #008000;"> Create a TCP/IP socket</span>
-socks =<span style="color: #000000;"> [ socket.socket(socket.AF_INET, socket.SOCK_STREAM),
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> Create a TCP/IP socket</span>
+socks =<span style="color: rgba(0, 0, 0, 1)"> [ socket.socket(socket.AF_INET, socket.SOCK_STREAM),
           socket.socket(socket.AF_INET, socket.SOCK_STREAM),
           ]
 
-</span><span style="color: #008000;">#</span><span style="color: #008000;"> Connect the socket to the port where the server is listening</span>
-<span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">connecting to %s port %s</span><span style="color: #800000;">'</span> %<span style="color: #000000;"> server_address)
-</span><span style="color: #0000ff;">for</span> s <span style="color: #0000ff;">in</span><span style="color: #000000;"> socks:
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> Connect the socket to the port where the server is listening</span>
+<span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">connecting to %s port %s</span><span style="color: rgba(128, 0, 0, 1)">'</span> %<span style="color: rgba(0, 0, 0, 1)"> server_address)
+</span><span style="color: rgba(0, 0, 255, 1)">for</span> s <span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> socks:
     s.connect(server_address)
 
-</span><span style="color: #0000ff;">for</span> message <span style="color: #0000ff;">in</span><span style="color: #000000;"> messages:
+</span><span style="color: rgba(0, 0, 255, 1)">for</span> message <span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> messages:
 
-    </span><span style="color: #008000;">#</span><span style="color: #008000;"> Send messages on both sockets</span>
-    <span style="color: #0000ff;">for</span> s <span style="color: #0000ff;">in</span><span style="color: #000000;"> socks:
-        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">%s: sending "%s"</span><span style="color: #800000;">'</span> %<span style="color: #000000;"> (s.getsockname(), message) )
+    </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> Send messages on both sockets</span>
+    <span style="color: rgba(0, 0, 255, 1)">for</span> s <span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> socks:
+        </span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">%s: sending "%s"</span><span style="color: rgba(128, 0, 0, 1)">'</span> %<span style="color: rgba(0, 0, 0, 1)"> (s.getsockname(), message) )
         s.send(message)
 
-    </span><span style="color: #008000;">#</span><span style="color: #008000;"> Read responses on both sockets</span>
-    <span style="color: #0000ff;">for</span> s <span style="color: #0000ff;">in</span><span style="color: #000000;"> socks:
-        data </span>= s.recv(1024<span style="color: #000000;">)
-        </span><span style="color: #0000ff;">print</span>( <span style="color: #800000;">'</span><span style="color: #800000;">%s: received "%s"</span><span style="color: #800000;">'</span> %<span style="color: #000000;"> (s.getsockname(), data) )
-        </span><span style="color: #0000ff;">if</span> <span style="color: #0000ff;">not</span><span style="color: #000000;"> data:
-            </span><span style="color: #0000ff;">print</span>(sys.stderr, <span style="color: #800000;">'</span><span style="color: #800000;">closing socket</span><span style="color: #800000;">'</span>, s.getsockname() )</pre>
+    </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> Read responses on both sockets</span>
+    <span style="color: rgba(0, 0, 255, 1)">for</span> s <span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> socks:
+        data </span>= s.recv(1024<span style="color: rgba(0, 0, 0, 1)">)
+        </span><span style="color: rgba(0, 0, 255, 1)">print</span>( <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">%s: received "%s"</span><span style="color: rgba(128, 0, 0, 1)">'</span> %<span style="color: rgba(0, 0, 0, 1)"> (s.getsockname(), data) )
+        </span><span style="color: rgba(0, 0, 255, 1)">if</span> <span style="color: rgba(0, 0, 255, 1)">not</span><span style="color: rgba(0, 0, 0, 1)"> data:
+            </span><span style="color: rgba(0, 0, 255, 1)">print</span>(sys.stderr, <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">closing socket</span><span style="color: rgba(128, 0, 0, 1)">'</span>, s.getsockname() )</pre>
 </div>
-<span class="cnblogs_code_collapse">select socket client</span></div>
+<span>select socket client</span></div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>selectors模块</p>
-<p>This module allows high-level and efficient I/O multiplexing, built upon the&nbsp;<a class="reference internal" title="select: Wait for I/O completion on multiple streams." href="https://docs.python.org/3/library/select.html#module-select"><code class="xref py py-mod docutils literal"><span class="pre">select</span></code></a>&nbsp;module primitives. Users are encouraged to use this module instead, unless they want precise control over the OS-level primitives used.</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">import selectors
+<p>This module allows high-level and efficient I/O multiplexing, built upon the&nbsp;<a title="select: Wait for I/O completion on multiple streams." href="https://docs.python.org/3/library/select.html#module-select"><code><span>select</span></code></a>&nbsp;module primitives. Users are encouraged to use this module instead, unless they want precise control over the OS-level primitives used.</p>
+<div>
+<pre>import selectors
 import socket
 
 sel = selectors.DefaultSelector()
@@ -613,8 +613,8 @@ while True:
 <h2>RabbitMQ队列　　</h2>
 <p>安装&nbsp;http://www.rabbitmq.com/install-standalone-mac.html</p>
 <p>安装python rabbitMQ module&nbsp;</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">pip install pika
+<div>
+<pre>pip install pika
 or
 easy_install pika
 or
@@ -624,11 +624,11 @@ https://pypi.python.org/pypi/pika
 </pre>
 </div>
 <p>实现最简单的队列通信</p>
-<p><img src="https://images2015.cnblogs.com/blog/720333/201609/720333-20160923111427277-763273185.png" alt="" /></p>
+<p><img src="https://images2015.cnblogs.com/blog/720333/201609/720333-20160923111427277-763273185.png" alt=""></p>
 <p>&nbsp;</p>
 <p>send端</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">#!/usr/bin/env python
+<div>
+<pre>#!/usr/bin/env python
 import pika
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -647,8 +647,8 @@ connection.close()
 </pre>
 </div>
 <p>receive端</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">#_*_coding:utf-8_*_
+<div>
+<pre>#_*_coding:utf-8_*_
 __author__ = 'Alex Li'
 import pika
 
@@ -677,26 +677,26 @@ channel.start_consuming()
 <p>&nbsp;</p>
 <p><strong>远程连接rabbitmq server的话，需要配置权限 噢&nbsp;</strong></p>
 <p>首先在rabbitmq server上创建一个用户</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:bash;gutter:true;">sudo rabbitmqctl  add_user alex alex3714　　</pre>
+<div>
+<pre>sudo rabbitmqctl  add_user alex alex3714　　</pre>
 </div>
 <p>同时还要配置权限，允许从外面访问</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:bash;gutter:true;">sudo rabbitmqctl set_permissions -p / alex ".*" ".*" ".*"
+<div>
+<pre>sudo rabbitmqctl set_permissions -p / alex ".*" ".*" ".*"
 </pre>
 </div>
-<div id="set_permissions" class="cmdsynopsis">
-<p><span class="code command">set_permissions&nbsp;[-p&nbsp;<em class="replaceable"><span class="code ">vhost</span></em>] {<em class="replaceable"><span class="code ">user</span></em>} {<em class="replaceable"><span class="code ">conf</span></em>} {<em class="replaceable"><span class="code ">write</span></em>} {<em class="replaceable"><span class="code ">read</span></em>}</span></p>
+<div>
+<p><span>set_permissions&nbsp;[-p&nbsp;<em><span>vhost</span></em>] {<em><span>user</span></em>} {<em><span>conf</span></em>} {<em><span>write</span></em>} {<em><span>read</span></em>}</span></p>
 </div>
-<div class="variablelist"><dl><dt><span class="term">vhost</span></dt><dd>
-<p>The name of the virtual host to which to grant the user access, defaulting to&nbsp;<span class="command">/.</span></p>
-</dd><dt><span class="term">user</span></dt><dd>
+<div><dl><dt><span>vhost</span></dt><dd>
+<p>The name of the virtual host to which to grant the user access, defaulting to&nbsp;<span>/.</span></p>
+</dd><dt><span>user</span></dt><dd>
 <p>The name of the user to grant access to the specified virtual host.</p>
-</dd><dt><span class="term">conf</span></dt><dd>
+</dd><dt><span>conf</span></dt><dd>
 <p>A regular expression matching resource names for which the user is granted configure permissions.</p>
-</dd><dt><span class="term">write</span></dt><dd>
+</dd><dt><span>write</span></dt><dd>
 <p>A regular expression matching resource names for which the user is granted write permissions.</p>
-</dd><dt><span class="term">read</span></dt><dd>
+</dd><dt><span>read</span></dt><dd>
 <p>A regular expression matching resource names for which the user is granted read permissions.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -704,8 +704,8 @@ channel.start_consuming()
 </dd></dl></div>
 <p>　　</p>
 <p>客户端连接的时候需要配置认证参数</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">credentials = pika.PlainCredentials('alex', 'alex3714')
+<div>
+<pre>credentials = pika.PlainCredentials('alex', 'alex3714')
 
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -716,11 +716,11 @@ channel = connection.channel()
 <p>　　</p>
 <p>　　</p>
 <h3>Work Queues</h3>
-<p><img src="http://www.rabbitmq.com/img/tutorials/python-two.png" alt="" width="332" height="111" /></p>
+<p><img src="http://www.rabbitmq.com/img/tutorials/python-two.png" alt="" width="332" height="111"></p>
 <p>在这种模式下，RabbitMQ会默认把p发的消息依次分发给各个消费者(c),跟负载均衡差不多</p>
 <p>消息提供者代码</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">import pika
+<div>
+<pre>import pika
 import time
 connection = pika.BlockingConnection(pika.ConnectionParameters(
     'localhost'))
@@ -747,8 +747,8 @@ connection.close()
 <p>　　</p>
 <p>&nbsp;</p>
 <p>消费者代码</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">#_*_coding:utf-8_*_
+<div>
+<pre>#_*_coding:utf-8_*_
 
 import pika, time
 
@@ -782,9 +782,9 @@ channel.start_consuming()
 <p>In order to make sure a message is never lost, RabbitMQ supports message&nbsp;<em>acknowledgments</em>. An ack(nowledgement) is sent back from the consumer to tell RabbitMQ that a particular message had been received, processed and that RabbitMQ is free to delete it.</p>
 <p>If a consumer dies (its channel is closed, connection is closed, or TCP connection is lost) without sending an ack, RabbitMQ will understand that a message wasn't processed fully and will re-queue it. If there are other consumers online at the same time, it will then quickly redeliver it to another consumer. That way you can be sure that no message is lost, even if the workers occasionally die.</p>
 <p>There aren't any message timeouts; RabbitMQ will redeliver the message when the consumer dies. It's fine even if processing a message takes a very, very long time.</p>
-<p>Message acknowledgments are turned on by default. In previous examples we explicitly turned them off via the&nbsp;<span class="code ">no_ack=True&nbsp;flag. It's time to remove this flag and send a proper acknowledgment from the worker, once we're done with a task.</span></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">def callback(ch, method, properties, body):
+<p>Message acknowledgments are turned on by default. In previous examples we explicitly turned them off via the&nbsp;<span>no_ack=True&nbsp;flag. It's time to remove this flag and send a proper acknowledgment from the worker, once we're done with a task.</span></p>
+<div>
+<pre>def callback(ch, method, properties, body):
     print " [x] Received %r" % (body,)
     time.sleep( body.count('.') )
     print " [x] Done"
@@ -800,26 +800,26 @@ channel.basic_consume(callback,
 <p>We have learned how to make sure that even if the consumer dies, the task isn't lost(by default, if wanna disable &nbsp;use no_ack=True). But our tasks will still be lost if RabbitMQ server stops.</p>
 <p>When RabbitMQ quits or crashes it will forget the queues and messages unless you tell it not to. Two things are required to make sure that messages aren't lost: we need to mark both the queue and messages as durable.</p>
 <p>First, we need to make sure that RabbitMQ will never lose our queue. In order to do so, we need to declare it as&nbsp;<em>durable</em>:</p>
-<div class="highlight">
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">channel.queue_declare(queue='hello', durable=True)
+<div>
+<div>
+<pre>channel.queue_declare(queue='hello', durable=True)
 </pre>
 </div>
 <p>　　</p>
 </div>
-<p>Although this command is correct by itself, it won't work in our setup. That's because we've already defined a queue called&nbsp;<span class="code ">hello&nbsp;which is not durable. RabbitMQ doesn't allow you to redefine an existing queue with different parameters and will return an error to any program that tries to do that. But there is a quick workaround - let's declare a queue with different name, for example<span class="code ">task_queue:</span></span></p>
-<div class="highlight">
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">channel.queue_declare(queue='task_queue', durable=True)
+<p>Although this command is correct by itself, it won't work in our setup. That's because we've already defined a queue called&nbsp;<span>hello&nbsp;which is not durable. RabbitMQ doesn't allow you to redefine an existing queue with different parameters and will return an error to any program that tries to do that. But there is a quick workaround - let's declare a queue with different name, for example<span>task_queue:</span></span></p>
+<div>
+<div>
+<pre>channel.queue_declare(queue='task_queue', durable=True)
 </pre>
 </div>
 <p>　　</p>
 </div>
-<p>This&nbsp;<span class="code ">queue_declare&nbsp;change needs to be applied to both the producer and consumer code.</span></p>
-<p>At that point we're sure that the&nbsp;<span class="code ">task_queue&nbsp;queue won't be lost even if RabbitMQ restarts. Now we need to mark our messages as persistent - by supplying a&nbsp;<span class="code ">delivery_mode&nbsp;property with a value&nbsp;<span class="code ">2.</span></span></span></p>
-<div class="highlight">
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">channel.basic_publish(exchange='',
+<p>This&nbsp;<span>queue_declare&nbsp;change needs to be applied to both the producer and consumer code.</span></p>
+<p>At that point we're sure that the&nbsp;<span>task_queue&nbsp;queue won't be lost even if RabbitMQ restarts. Now we need to mark our messages as persistent - by supplying a&nbsp;<span>delivery_mode&nbsp;property with a value&nbsp;<span>2.</span></span></span></p>
+<div>
+<div>
+<pre>channel.basic_publish(exchange='',
                       routing_key="task_queue",
                       body=message,
                       properties=pika.BasicProperties(
@@ -829,17 +829,17 @@ channel.basic_consume(callback,
 </div>
 <h3>消息公平分发</h3>
 <p>如果Rabbit只管按顺序把消息发到各个消费者身上，不考虑消费者负载的话，很可能出现，一个机器配置不高的消费者那里堆积了很多消息处理不完，同时配置高的消费者却一直很轻松。为解决此问题，<strong>可以在各个消费者端，配置perfetch=1</strong>,意思就是告诉RabbitMQ在我这个消费者当前消息还没处理完的时候就不要再给我发新消息了。</p>
-<p><img src="http://www.rabbitmq.com/img/tutorials/prefetch-count.png" alt="" width="396" height="111" /></p>
+<p><img src="http://www.rabbitmq.com/img/tutorials/prefetch-count.png" alt="" width="396" height="111"></p>
 <p>&nbsp;</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">channel.basic_qos(prefetch_count=1)
+<div>
+<pre>channel.basic_qos(prefetch_count=1)
 </pre>
 </div>
 <p>&nbsp;</p>
 <p><strong>带消息持久化+公平分发的完整代码</strong></p>
 <p>生产者端</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">#!/usr/bin/env python
+<div>
+<pre>#!/usr/bin/env python
 import pika
 import sys
 
@@ -861,8 +861,8 @@ connection.close()
 </pre>
 </div>
 <p>消费者端</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">#!/usr/bin/env python
+<div>
+<pre>#!/usr/bin/env python
 import pika
 import time
 
@@ -891,12 +891,12 @@ channel.start_consuming()
 <p>之前的例子都基本都是1对1的消息发送和接收，即消息只能发送到指定的queue里，但有些时候你想让你的消息被所有的Queue收到，类似广播的效果，这时候就要用到exchange了，</p>
 <p>An exchange is a very simple thing. On one side it receives messages from producers and the other side it pushes them to queues. The exchange must know exactly what to do with a message it receives. Should it be appended to a particular queue? Should it be appended to many queues? Or should it get discarded. The rules for that are defined by the&nbsp;<em>exchange type.</em></p>
 <p>Exchange在定义的时候是有类型的，以决定到底是哪些Queue符合条件，可以接收消息</p>
-<p><br />fanout:&nbsp;所有bind到此exchange的queue都可以接收消息<br />direct:&nbsp;通过routingKey和exchange决定的那个唯一的queue可以接收消息<br />topic:所有符合routingKey(此时可以是一个表达式)的routingKey所bind的queue可以接收消息<br /><br />　　&nbsp;表达式符号说明：#代表一个或多个字符，*代表任何字符<br />&nbsp; &nbsp; &nbsp; 例：#.a会匹配a.a，aa.a，aaa.a等<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *.a会匹配a.a，b.a，c.a等<br />&nbsp; &nbsp; &nbsp;注：使用RoutingKey为#，Exchange Type为topic的时候相当于使用fanout　</p>
+<p><br>fanout:&nbsp;所有bind到此exchange的queue都可以接收消息<br>direct:&nbsp;通过routingKey和exchange决定的那个唯一的queue可以接收消息<br>topic:所有符合routingKey(此时可以是一个表达式)的routingKey所bind的queue可以接收消息<br><br>　　&nbsp;表达式符号说明：#代表一个或多个字符，*代表任何字符<br>&nbsp; &nbsp; &nbsp; 例：#.a会匹配a.a，aa.a，aaa.a等<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *.a会匹配a.a，b.a，c.a等<br>&nbsp; &nbsp; &nbsp;注：使用RoutingKey为#，Exchange Type为topic的时候相当于使用fanout　</p>
 <p>headers: 通过headers 来决定把消息发给哪些queue</p>
-<p><img src="http://www.rabbitmq.com/img/tutorials/python-three-overall.png" alt="" width="329" height="160" /></p>
+<p><img src="http://www.rabbitmq.com/img/tutorials/python-three-overall.png" alt="" width="329" height="160"></p>
 <p>消息publisher</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">import pika
+<div>
+<pre>import pika
 import sys
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -915,8 +915,8 @@ connection.close()
 </pre>
 </div>
 <p>消息subscriber</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">#_*_coding:utf-8_*_
+<div>
+<pre>#_*_coding:utf-8_*_
 __author__ = 'Alex Li'
 import pika
 
@@ -948,10 +948,10 @@ channel.start_consuming()
 <p>　　</p>
 <h3>有选择的接收消息(exchange type=direct)　</h3>
 <p>RabbitMQ还支持根据关键字发送，即：队列绑定关键字，发送者将数据根据关键字发送到消息exchange，exchange根据 关键字 判定应该将数据发送至指定队列。</p>
-<h3><img src="http://www.rabbitmq.com/img/tutorials/python-four.png" alt="" width="423" height="171" /></h3>
+<h3><img src="http://www.rabbitmq.com/img/tutorials/python-four.png" alt="" width="423" height="171"></h3>
 <h3>publisher</h3>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">import pika
+<div>
+<pre>import pika
 import sys
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -971,8 +971,8 @@ connection.close()
 </pre>
 </div>
 <h3>subscriber　</h3>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">import pika
+<div>
+<pre>import pika
 import sys
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -1009,13 +1009,13 @@ channel.start_consuming()
 </div>
 <p>　　</p>
 <h3>更细致的消息过滤</h3>
-<p>Although using the&nbsp;<span class="code ">direct&nbsp;exchange improved our system, it still has limitations - it can't do routing based on multiple criteria.</span></p>
-<p>In our logging system we might want to subscribe to not only logs based on severity, but also based on the source which emitted the log. You might know this concept from the&nbsp;<a href="http://en.wikipedia.org/wiki/Syslog"><span class="code ">syslog</span></a>&nbsp;unix tool, which routes logs based on both severity (info/warn/crit...) and facility (auth/cron/kern...).</p>
+<p>Although using the&nbsp;<span>direct&nbsp;exchange improved our system, it still has limitations - it can't do routing based on multiple criteria.</span></p>
+<p>In our logging system we might want to subscribe to not only logs based on severity, but also based on the source which emitted the log. You might know this concept from the&nbsp;<a href="http://en.wikipedia.org/wiki/Syslog"><span>syslog</span></a>&nbsp;unix tool, which routes logs based on both severity (info/warn/crit...) and facility (auth/cron/kern...).</p>
 <p>That would give us a lot of flexibility - we may want to listen to just critical errors coming from 'cron' but also all logs from 'kern'.</p>
-<p><img src="http://www.rabbitmq.com/img/tutorials/python-five.png" alt="" width="424" height="171" /></p>
+<p><img src="http://www.rabbitmq.com/img/tutorials/python-five.png" alt="" width="424" height="171"></p>
 <p>publisher</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">import pika
+<div>
+<pre>import pika
 import sys
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -1035,8 +1035,8 @@ connection.close()
 </pre>
 </div>
 <p>subscriber</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">import pika
+<div>
+<pre>import pika
 import sys
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -1072,42 +1072,42 @@ channel.start_consuming()
 </pre>
 </div>
 <p>To receive all the logs run:</p>
-<div class="highlight">
-<pre>python receive_logs_topic.py <span class="s2">"#"
+<div>
+<pre>python receive_logs_topic.py <span>"#"
 </span></pre>
 </div>
-<p>To receive all logs from the facility "<span class="code ">kern":</span></p>
-<div class="highlight">
-<pre>python receive_logs_topic.py <span class="s2">"kern.*"
+<p>To receive all logs from the facility "<span>kern":</span></p>
+<div>
+<pre>python receive_logs_topic.py <span>"kern.*"
 </span></pre>
 </div>
-<p>Or if you want to hear only about "<span class="code ">critical" logs:</span></p>
-<div class="highlight">
-<pre>python receive_logs_topic.py <span class="s2">"*.critical"
+<p>Or if you want to hear only about "<span>critical" logs:</span></p>
+<div>
+<pre>python receive_logs_topic.py <span>"*.critical"
 </span></pre>
 </div>
 <p>You can create multiple bindings:</p>
-<div class="highlight">
-<pre>python receive_logs_topic.py <span class="s2">"kern.*" <span class="s2">"*.critical"
+<div>
+<pre>python receive_logs_topic.py <span>"kern.*" <span>"*.critical"
 </span></span></pre>
 </div>
-<p>And to emit a log with a routing key "<span class="code ">kern.critical" type:</span></p>
-<div class="highlight">
-<pre>python emit_log_topic.py <span class="s2">"kern.critical" <span class="s2">"A critical kernel error"</span></span></pre>
+<p>And to emit a log with a routing key "<span>kern.critical" type:</span></p>
+<div>
+<pre>python emit_log_topic.py <span>"kern.critical" <span>"A critical kernel error"</span></span></pre>
 </div>
 <p>　　</p>
 <h2>Remote procedure call (RPC)</h2>
-<p>To illustrate how an RPC service could be used we're going to create a simple client class. It's going to expose a method named&nbsp;<span class="code ">call&nbsp;which sends an RPC request and blocks until the answer is received:</span></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">fibonacci_rpc = FibonacciRpcClient()
+<p>To illustrate how an RPC service could be used we're going to create a simple client class. It's going to expose a method named&nbsp;<span>call&nbsp;which sends an RPC request and blocks until the answer is received:</span></p>
+<div>
+<pre>fibonacci_rpc = FibonacciRpcClient()
 result = fibonacci_rpc.call(4)
 print("fib(4) is %r" % result)
 </pre>
 </div>
-<p><img src="http://www.rabbitmq.com/img/tutorials/python-six.png" alt="" width="576" height="200" /></p>
+<p><img src="http://www.rabbitmq.com/img/tutorials/python-six.png" alt="" width="576" height="200"></p>
 <p>RPC server</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">#_*_coding:utf-8_*_
+<div>
+<pre>#_*_coding:utf-8_*_
 __author__ = 'Alex Li'
 import pika
 import time
@@ -1147,8 +1147,8 @@ channel.start_consuming()
 </pre>
 </div>
 <p>RPC client</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">import pika
+<div>
+<pre>import pika
 import uuid
 
 class FibonacciRpcClient(object):
@@ -1200,12 +1200,12 @@ print(" [.] Got %r" % response)
 <h3>　</h3>
 <h3>Twsited异步网络框架</h3>
 <p>Twisted是一个事件驱动的网络框架，其中包含了诸多功能，例如：网络协议、线程、数据库管理、网络操作、电子邮件等。　</p>
-<p><img src="https://images2015.cnblogs.com/blog/425762/201512/425762-20151227041644859-201636592.png" alt="" width="959" height="619" /></p>
+<p><img src="https://images2015.cnblogs.com/blog/425762/201512/425762-20151227041644859-201636592.png" alt="" width="959" height="619"></p>
 <p><strong>事件驱动</strong></p>
 <p>简而言之，事件驱动分为二个部分：第一，注册事件；第二，触发事件。</p>
-<p>自定义事件驱动框架，命名为：&ldquo;弑君者&rdquo;：</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">#!/usr/bin/env python
+<p>自定义事件驱动框架，命名为：“弑君者”：</p>
+<div>
+<pre>#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
 # event_drive.py
@@ -1229,9 +1229,9 @@ class BaseHandler(object):
 最牛逼的事件驱动框架
 </pre>
 </div>
-<p>程序员使用&ldquo;弑君者框架&rdquo;：　　</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">#!/usr/bin/env python
+<p>程序员使用“弑君者框架”：　　</p>
+<div>
+<pre>#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
 from source import event_drive
@@ -1250,23 +1250,23 @@ event_drive.run()
 <p>&nbsp;</p>
 <h4><strong>Protocols</strong></h4>
 <p>Protocols描述了如何以异步的方式处理网络中的事件。HTTP、DNS以及IMAP是应用层协议中的例子。Protocols实现了IProtocol接口，它包含如下的方法：</p>
-<pre name="code" class="prettyprint"><code><span class="pln">makeConnection               <span class="pun">在<span class="pln">transport<span class="pun">对象和服务器之间建立一条连接<span class="pln">
-connectionMade               <span class="pun">连接建立起来后调用<span class="pln">
-dataReceived                 <span class="pun">接收数据时调用<span class="pln">
-connectionLost               <span class="pun">关闭连接时调用</span></span></span></span></span></span></span></span></span></span></code></pre>
+<pre name="code"><code><span>makeConnection               <span>在<span>transport<span>对象和服务器之间建立一条连接<span>
+connectionMade               <span>连接建立起来后调用<span>
+dataReceived                 <span>接收数据时调用<span>
+connectionLost               <span>关闭连接时调用</span></span></span></span></span></span></span></span></span></span></code></pre>
 <h4><strong>Transports</strong></h4>
-<p>Transports代表网络中两个通信结点之间的连接。Transports负责描述连接的细节，比如连接是面向流式的还是面向数据报的，流控以及可靠性。TCP、UDP和Unix套接字可作为transports的例子。它们被设计为&ldquo;满足最小功能单元，同时具有最大程度的可复用性&rdquo;，而且从协议实现中分离出来，这让许多协议可以采用相同类型的传输。Transports实现了ITransports接口，它包含如下的方法：</p>
-<pre name="code" class="prettyprint"><code><span class="pln">write                   <span class="pun">以非阻塞的方式按顺序依次将数据写到物理连接上<span class="pln">
-writeSequence           <span class="pun">将一个字符串列表写到物理连接上<span class="pln">
-loseConnection          <span class="pun">将所有挂起的数据写入，然后关闭连接<span class="pln">
-getPeer                 <span class="pun">取得连接中对端的地址信息<span class="pln">
-getHost                 <span class="pun">取得连接中本端的地址信息</span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>Transports代表网络中两个通信结点之间的连接。Transports负责描述连接的细节，比如连接是面向流式的还是面向数据报的，流控以及可靠性。TCP、UDP和Unix套接字可作为transports的例子。它们被设计为“满足最小功能单元，同时具有最大程度的可复用性”，而且从协议实现中分离出来，这让许多协议可以采用相同类型的传输。Transports实现了ITransports接口，它包含如下的方法：</p>
+<pre name="code"><code><span>write                   <span>以非阻塞的方式按顺序依次将数据写到物理连接上<span>
+writeSequence           <span>将一个字符串列表写到物理连接上<span>
+loseConnection          <span>将所有挂起的数据写入，然后关闭连接<span>
+getPeer                 <span>取得连接中对端的地址信息<span>
+getHost                 <span>取得连接中本端的地址信息</span></span></span></span></span></span></span></span></span></span></code></pre>
 <p>将transports从协议中分离出来也使得对这两个层次的测试变得更加简单。可以通过简单地写入一个字符串来模拟传输，用这种方式来检查。</p>
 <p>　　</p>
 <p>&nbsp;</p>
 <p>EchoServer</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">from twisted.internet import protocol
+<div>
+<pre>from twisted.internet import protocol
 from twisted.internet import reactor
 
 class Echo(protocol.Protocol):
@@ -1286,8 +1286,8 @@ if __name__ == '__main__':
 </div>
 <p>　　</p>
 <p>EchoClient</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">from twisted.internet import reactor, protocol
+<div>
+<pre>from twisted.internet import reactor, protocol
 
 
 # a client protocol
@@ -1332,8 +1332,8 @@ if __name__ == '__main__':
 <p>运行服务器端脚本将启动一个TCP服务器，监听端口1234上的连接。服务器采用的是Echo协议，数据经TCP transport对象写出。运行客户端脚本将对服务器发起一个TCP连接，回显服务器端的回应然后终止连接并停止reactor事件循环。这里的Factory用来对连接的双方生成protocol对象实例。两端的通信是异步的，connectTCP负责注册回调函数到reactor事件循环中，当socket上有数据可读时通知回调处理。</p>
 <h3><strong>一个传送文件的例子&nbsp;</strong></h3>
 <p><strong>server side&nbsp;</strong></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">#_*_coding:utf-8_*_
+<div>
+<pre>#_*_coding:utf-8_*_
 # This is the Twisted Fast Poetry Server, version 1.0
 
 import optparse, os
@@ -1416,8 +1416,8 @@ if __name__ == '__main__':
 </pre>
 </div>
 <p><strong>client side 　　</strong></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;"># This is the Twisted Get Poetry Now! client, version 3.0.
+<div>
+<pre># This is the Twisted Get Poetry Now! client, version 3.0.
 
 # NOTE: This should not be used as the basis for production code.
 
@@ -1531,10 +1531,10 @@ if __name__ == '__main__':
 <p>　　</p>
 <h2>SqlAlchemy ORM　　</h2>
 <p>SQLAlchemy是<a href="http://baike.baidu.com/subview/21087/21087.htm" target="_blank">Python</a>编程语言下的一款ORM框架，该框架建立在数据库API之上，使用关系对象映射进行数据库操作，简言之便是：将对象转换成SQL，然后使用数据API执行SQL并获取执行结果</p>
-<p><img src="https://images2015.cnblogs.com/blog/425762/201601/425762-20160117042127803-263417768.png" alt="" width="940" height="658" /></p>
+<p><img src="https://images2015.cnblogs.com/blog/425762/201601/425762-20160117042127803-263417768.png" alt="" width="940" height="658"></p>
 <p>Dialect用于和数据API进行交流，根据配置文件的不同调用不同的数据库API，从而实现对数据库的操作，如：</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">MySQL-Python
+<div>
+<pre>MySQL-Python
     mysql+mysqldb://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;[:&lt;port&gt;]/&lt;dbname&gt;
  
 pymysql
@@ -1552,8 +1552,8 @@ cx_Oracle
 <p>　　</p>
 <p>步骤一：</p>
 <p>使用 Engine/ConnectionPooling/Dialect 进行数据库操作，Engine使用ConnectionPooling连接数据库，然后再通过Dialect执行SQL语句。</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">#!/usr/bin/env python
+<div>
+<pre>#!/usr/bin/env python
 # -*- coding:utf-8 -*-
  
 from sqlalchemy import create_engine
@@ -1581,8 +1581,8 @@ result.fetchall()
 <p>　　</p>
 <p>步骤二：</p>
 <p>使用 Schema Type/SQL Expression Language/Engine/ConnectionPooling/Dialect 进行数据库操作。Engine使用Schema Type创建一个特定的结构对象，之后通过SQL Expression Language将该对象转换成SQL语句，然后通过&nbsp;ConnectionPooling 连接数据库，再然后通过&nbsp;Dialect 执行SQL，并获取结果。</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">#!/usr/bin/env python
+<div>
+<pre>#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey
@@ -1604,8 +1604,8 @@ metadata.create_all(engine)
 </pre>
 </div>
 <p>增删改查</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;collapse:true;;gutter:true;">#!/usr/bin/env python
+<div>
+<pre>#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey
@@ -1651,8 +1651,8 @@ conn.close()
 </div>
 <p>&nbsp;</p>
 <p><strong>一个简单的完整例子</strong></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">from sqlalchemy import create_engine
+<div>
+<pre>from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 from  sqlalchemy.orm import sessionmaker
@@ -1695,8 +1695,8 @@ if __name__ == '__main__':
 <p>注：SQLAlchemy无法修改表结构，如果需要可以使用SQLAlchemy开发者开源的另外一个软件Alembic来完成。</p>
 <p>步骤三：</p>
 <p>使用 ORM/Schema Type/SQL Expression Language/Engine/ConnectionPooling/Dialect 所有组件对数据进行操作。根据类创建对象，对象转换成SQL，执行SQL。</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">#!/usr/bin/env python
+<div>
+<pre>#!/usr/bin/env python
 # -*- coding:utf-8 -*-
  
 from sqlalchemy.ext.declarative import declarative_base
@@ -1758,14 +1758,14 @@ session = Session()
 </pre>
 </div>
 <h3>外键关联</h3>
-<p>A one to many relationship places a foreign key on the child table referencing the parent.<a class="reference internal" title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>&nbsp;is then specified on the parent, as referencing a collection of items represented by the child</p>
-<div class="cnblogs_Highlighter">
-<pre><span class="kn">from <span class="nn">sqlalchemy <span class="kn">import <span class="n">Table<span class="p">, <span class="n">Column<span class="p">, <span class="n">Integer<span class="p">, <span class="n">ForeignKey
-<span class="kn">from <span class="nn">sqlalchemy.orm <span class="kn">import <span class="n">relationship
-<span class="kn">from <span class="nn">sqlalchemy.ext.declarative <span class="kn">import <span class="n">declarative_base
+<p>A one to many relationship places a foreign key on the child table referencing the parent.<a title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship"><code><span>relationship()</span></code></a>&nbsp;is then specified on the parent, as referencing a collection of items represented by the child</p>
+<div>
+<pre><span>from <span>sqlalchemy <span>import <span>Table<span>, <span>Column<span>, <span>Integer<span>, <span>ForeignKey
+<span>from <span>sqlalchemy.orm <span>import <span>relationship
+<span>from <span>sqlalchemy.ext.declarative <span>import <span>declarative_base
 
-<span class="n">Base <span class="o">= <span class="n">declarative_base<span class="p">()</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre>
-<pre class="brush:python;gutter:true;"><br />class Parent(Base):
+<span>Base <span>= <span>declarative_base<span>()</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre>
+<pre><br>class Parent(Base):
     __tablename__ = 'parent'
     id = Column(Integer, primary_key=True)
     children = relationship("Child")
@@ -1776,9 +1776,9 @@ class Child(Base):
     parent_id = Column(Integer, ForeignKey('parent.id'))
 </pre>
 </div>
-<p>To establish a bidirectional relationship in one-to-many, where the &ldquo;reverse&rdquo; side is a many to one, specify an additional&nbsp;<a class="reference internal" title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>&nbsp;and connect the two using the<a class="reference internal" title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship.params.back_populates"><code class="xref py py-paramref docutils literal"><span class="pre">relationship.back_populates</span></code></a>&nbsp;parameter:</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">class Parent(Base):
+<p>To establish a bidirectional relationship in one-to-many, where the “reverse” side is a many to one, specify an additional&nbsp;<a title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship"><code><span>relationship()</span></code></a>&nbsp;and connect the two using the<a title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship.params.back_populates"><code><span>relationship.back_populates</span></code></a>&nbsp;parameter:</p>
+<div>
+<pre>class Parent(Base):
     __tablename__ = 'parent'
     id = Column(Integer, primary_key=True)
     children = relationship("Child", back_populates="parent")
@@ -1790,10 +1790,10 @@ class Child(Base):
     parent = relationship("Parent", back_populates="children")
 </pre>
 </div>
-<p><code class="docutils literal"><span class="pre">Child</span></code>&nbsp;will get a&nbsp;<code class="docutils literal"><span class="pre">parent</span></code>&nbsp;attribute with many-to-one semantics.</p>
-<p>Alternatively, the&nbsp;<a class="reference internal" title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship.params.backref"><code class="xref py py-paramref docutils literal"><span class="pre">backref</span></code></a>&nbsp;option may be used on a single&nbsp;<a class="reference internal" title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>&nbsp;instead of using<a class="reference internal" title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship.params.back_populates"><code class="xref py py-paramref docutils literal"><span class="pre">back_populates</span></code></a>:</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:python;gutter:true;">class Parent(Base):
+<p><code><span>Child</span></code>&nbsp;will get a&nbsp;<code><span>parent</span></code>&nbsp;attribute with many-to-one semantics.</p>
+<p>Alternatively, the&nbsp;<a title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship.params.backref"><code><span>backref</span></code></a>&nbsp;option may be used on a single&nbsp;<a title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship"><code><span>relationship()</span></code></a>&nbsp;instead of using<a title="sqlalchemy.orm.relationship" href="http://docs.sqlalchemy.org/en/rel_1_0/orm/relationship_api.html#sqlalchemy.orm.relationship.params.back_populates"><code><span>back_populates</span></code></a>:</p>
+<div>
+<pre>class Parent(Base):
     __tablename__ = 'parent'
     id = Column(Integer, primary_key=True)
     children = relationship("Child", backref="parent")
@@ -1808,24 +1808,24 @@ class Child(Base):
 <li><strong>LEFT JOIN</strong>: Return all rows from the left table, and the matched rows from the right table</li>
 <li><strong>RIGHT JOIN</strong>: Return all rows from the right table, and the matched rows from the left table</li>
 </ul>
-<div class="cnblogs_Highlighter">
-<pre class="brush:sql;gutter:true;">select host.id,hostname,ip_addr,port,host_group.name from host right join host_group on host.id = host_group.host_id
+<div>
+<pre>select host.id,hostname,ip_addr,port,host_group.name from host right join host_group on host.id = host_group.host_id
 </pre>
 </div>
 <p>in SQLAchemy</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:sql;gutter:true;">session.query(Host).join(Host.host_groups).filter(HostGroup.name=='t1').group_by("Host").all()
+<div>
+<pre>session.query(Host).join(Host.host_groups).filter(HostGroup.name=='t1').group_by("Host").all()
 </pre>
 </div>
 <p>　　</p>
 <p>group by 查询</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:sql;gutter:true;">select name,count(host.id) as NumberOfHosts from host right join host_group on host.id= host_group.host_id group by name;
+<div>
+<pre>select name,count(host.id) as NumberOfHosts from host right join host_group on host.id= host_group.host_id group by name;
 </pre>
 </div>
 <p>in SQLAchemy</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:sql;gutter:true;">from sqlalchemy import func
+<div>
+<pre>from sqlalchemy import func
 session.query(HostGroup, func.count(HostGroup.name )).group_by(HostGroup.name).all()
 
 #another example
@@ -1858,7 +1858,7 @@ FROM users GROUP BY users.name
 <li>可以异步的执行多个命令</li>
 <li>对多台机器</li>
 </ol>
-<p>&gt;&gt;:run "df -h" --hosts 192.168.3.55 10.4.3.4 <br />task id: 45334<br />&gt;&gt;: check_task  45334 <br />&gt;&gt;: </p>
+<p>&gt;&gt;:run "df -h" --hosts 192.168.3.55 10.4.3.4 <br>task id: 45334<br>&gt;&gt;: check_task  45334 <br>&gt;&gt;: </p>
 <p>&nbsp;</p>
 <h3>&nbsp;</h3>
 <p>&nbsp;</p>
