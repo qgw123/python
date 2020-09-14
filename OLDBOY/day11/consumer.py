@@ -12,7 +12,7 @@ def callback(ch, method, properties, body): #回调函数
     print('--->',ch, method, properties)
     print('[x] Received %r' % body)
     time.sleep(20)
-#print("method.delivery_tag", method.delivery_tag)
+#print("method.delivery_tag", method.delivery_tag)-
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
 channel.basic_qos(prefetch_count=1)
