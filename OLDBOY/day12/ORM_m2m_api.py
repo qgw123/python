@@ -22,8 +22,13 @@ session = Session_class()
 author_obj = session.query(ORM_m2m.Author).filter(ORM_m2m.Author.name=='qgw').first()
 print(author_obj.books[1].pub_date)
 
+print('--------通过书表查关联的作者---------')
+book_obj = session.query(ORM_m2m.Book).filter_by(name="Python").first()
+print(book_obj.name, book_obj.authors)
+
+print('--------通过作者表查关联的书---------')
 book_obj = session.query(ORM_m2m.Book).filter(ORM_m2m.Book.id==1).first()
-print(book_obj.authors)
+print(author_obj.name, book_obj.authors)
 print(book_obj)
 
 session.commit()
