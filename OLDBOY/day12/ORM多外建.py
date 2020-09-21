@@ -6,7 +6,7 @@ from sqlalchemy import Column, String, Integer, ForeignKey
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import relationship
 
-engine = create_engine('mysql+pymysql://root:123456@192.168.80.128/db2?charset"utf8mb4"',
+engine = create_engine('mysql+pymysql://root:123456@192.168.80.128/db2?charset=utf8mb4',
                        encoding='utf-8')
 Base = declarative_base()
 

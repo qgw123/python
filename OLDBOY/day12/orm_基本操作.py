@@ -6,7 +6,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import func     #分组
 
-engine = create_engine('mysql+pymysql://root:123456@192.168.80.128/db1',
+engine = create_engine('mysql+pymysql://root:123456@192.168.80.128/db1?charset=utf8mb4',
                        encoding='utf-8',)#echo=True)
 
 Base = declarative_base()
