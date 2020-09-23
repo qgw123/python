@@ -1,1 +1,1 @@
-__author__ = 'qgw'
+#_*_coding:utf-8_*_
