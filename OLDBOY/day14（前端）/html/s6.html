@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>框</title>
+</head>
+<body>
+    <form enctype="multipart/form-data">
+        <select name="city" size="10" multiple="multiple">
+            <option value="1">北京</option>
+            <option value="2" selected="selected">广东</option>
+            <option value="3">江西</option>
+            <option value="4">福建</option>
+            <option value="5">广西</option>
+        </select>
+
+        姓名：<input type="text" name="user"/>
+        <div>
+            <p style='background-color:red;'>您的性别：</p>
+            男：<input type="radio" name="sex" value="1" checked="checked"/>
+            女：<input type="radio" name="sex" value="2" />
+
+            <p style='background-color:yellow;'>您的爱好：</p>
+            篮球：<input type="checkbox"  name="favor" value="1"/>
+            乒乓球：<input type="checkbox" name="favor" value="2" checked="checked"/>
+            羽毛：<input type="checkbox" name="favor" value="3"/>
+            足球：<input type="checkbox" name="favor" value="4"/>
+            排球：<input type="checkbox" name="favor" value="5"/>
+            网球：<input type="checkbox" name="favor" value="6"/>
+            台球：<input type="checkbox" name="favor" value="7" checked="checked"/>
+
+            <p style='background-color:yellowgreen;'>您掌握的技能</p>
+            Linux：<input type="checkbox" name="skill" checked="checked">
+            Python：<input type="checkbox" name="skill"/>
+            PHP：<input type="checkbox" name="skill" checked="checked"/>
+            JAVA：<input type="checkbox" name="skill"/>
+
+            <p style="background-color: bisque;">上传文件</p>
+
+            <input type="file" name="fname"/>
+        </div>
+
+        <textarea name="menu">默认值是什么</textarea>
+
+        <input type="submit" value="提交" />
+        <input type="reset" value="重置" />
+    </form>
+</body>
+</html>

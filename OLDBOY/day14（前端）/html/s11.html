@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        #i1,#i2,#i3{
+            background-color:yellowgreen;
+            height:50px;
+        }
+        .c1{
+            background-color:blue;
+            height:50px;
+        }
+        /*div{
+            background-color:red;
+            height:50px;
+        } */
+
+        span div{
+            background-color:darkslategray;
+            height:50px;
+        }
+        input[n="qgw"]{width:100px;height:100px;}
+        .c5[n='pass']{width: 80px;height: 90px;}
+    </style>
+</head>
+<body>
+    <div id="i1">11</div>
+    <span class="c1">11
+        <div>1234</div>
+        12346798
+    </span>
+    <div class="c1">11</div>
+    <input  type="text" n="qgw">
+    <input  class="c5" type="password" n="pass">
+</body>
+</html>

@@ -36,7 +36,13 @@ HTML：
             标签之间可以嵌套
             标签存在的意思：   css操作，js操作
 
+        - input系列
+            input type='text'     - name 属性
+            input type='password' - name属性   密码（加密）
+            input type='submit'   - 提交按钮，表单
+            input type='button'   - 按钮
 
+            input type='radio'    - value
 CSS：
     - 颜色
     - 位置
