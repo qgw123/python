@@ -69,3 +69,23 @@ CSS
                 padding：内边距
 
 
+
+    position:
+        - fixed  ==> 固定在页面某个位置
+        - relative + absolute       ==> 相对定位
+            <div style="position: relative;">
+                <div style="position: absolute"></div>
+            </div>
+
+    opacity 0.5;    ==> 透明度
+    z-linz  ;       ==> 优先显示  数字大的先显示
+    overflow: hidden, auto
+    hover： 字体的背景色
+
+    background
+        - background-image:url('image/4.gif')
+        - background-repeat: repeat-y;
+        - background-position-x:
+        - background-position-y:
+        - background-position: 10px 10px;
+
