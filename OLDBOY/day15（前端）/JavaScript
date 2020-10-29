@@ -70,7 +70,6 @@ JavaScript
 
             不支持字典的循环
 
-
     条件语句
         if(条件){
 
@@ -87,6 +86,16 @@ JavaScript
         &&   and
         ||   or
 
+        switch(name){
+            case '1':
+                age = 123;
+                break;
+            case '2':
+                age = 456;
+                break;
+            default:
+                age = 777;
+        }
 
     函数：
 
