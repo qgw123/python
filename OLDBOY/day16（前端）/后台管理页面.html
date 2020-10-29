@@ -3,8 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>后台管理</title>
+    <style>
+        .pg-header{
+            background-color: #2892CE;
+            height: 48px;
+            color: white;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .pg-content .menu{
+            position: fixed;
+            top: 48px;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: antiquewhite;
+        }
+        .pg-content .content{
+            position: fixed;
+            top: 48px;
+            right: 0;
+            left: 205px;
+            bottom: 0;
+            background-color: yellowgreen;
+            overflow: auto;
+        }
+    </style>
+
 </head>
-<body>
-    <div></div>
+<body style="margin: 0 auto">
+    <div class="pg-header"></div>
+    <div class="pg-content">
+        <div class="menu left">a</div>
+        <div class="content left">b</div>
+    </div>
+    <div class="pg-footer"></div>
 </body>
 </html>
