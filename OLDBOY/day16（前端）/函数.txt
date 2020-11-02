@@ -1,0 +1,62 @@
+普通函数：
+    function func(){
+
+    }
+
+匿名函数:
+    function func(arg) {
+        return arg+1
+    }
+
+    setInterval("func()", 5000);
+    setInterval(function(){
+        console.log(123)
+    },5000)
+
+自执行函数：
+    function func（arg）{
+         console.log(arg)
+    }
+
+    //func(1)
+
+    (function(arg){
+        console.log(arg)
+    })(1)
+
+
+序列化
+    JSON.stringify()    将对象转化为字符串
+    JSON.parse()        将字符串转化为对象类型
+
+转义
+    客户端（cookie） =》 服务器
+    将数据经过转义后，保存在cookie
+    encodeURL()
+    decodeURL()
+
+eval
+    JavaScript中的eval是Python中eval和exec的合集，既可以编译代码也可以获取返回值。
+        eval()
+        EvalError   执行字符串中的JavaScript代码
+
+时间处理
+    JavaScript中提供了时间相关的操作，时间操作中分为两种时间：
+        时间统一时间
+        本地时间（东8区）
+
+    Date对象
+        var d = new Date()
+
+        d.getXXX    获取
+        d.setXXX    设置
+
+作用域
+    其他语言： 以代码块作为作用域
+    python：是以函数作为作用域
+    JavaScript：是以函数作为作用域
+
+    函数的作用域在函数未被之前，已经创建
+    函数的作用域存在作用域链，并且也是在调用之前创建
+
+
