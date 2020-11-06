@@ -1,0 +1,86 @@
+DOM
+    查找
+        直接查找
+            var obj = document.getElementById('i1');
+        间接查找
+            文件内容操作：
+                innerText   仅文本
+                innerHTML   全内容
+                value
+                    input       value获取当前标签中的值
+                    select      获取选中的value值（selectedIndex）
+                    textarea     value获取当前标签中的值
+
+    操作
+        样式操作
+                className
+                classList
+                    classList.add
+                    classList.remove
+                <div class='c1 c2'></div>
+
+        属性操作
+                attributes
+                getAttributes
+                removeAttribute
+
+        创建标签，并添加到html中  （s4.html）
+                a、字符窜形式
+                b、对象的方式
+                    document.createElement('标签')
+
+        提交表单
+                document.getElementById().submit()
+
+        其他
+                console.log()   输出值
+                alter           弹窗
+                var v = confirm（信息） v:ture false
+
+                location.href
+                location.href = ‘’重定向，跳转
+                location.reload()   页面刷新
+
+            定时器
+                    var o1 = setInterval(function(){},5000)；
+                    clearInterval(o1)；
+
+                    var o2 = setTimeout(function(){},5000)；
+                    clearTimeout(o2)；
+
+
+                    var obj = setInterval（function（）{   定时器
+                        ）
+                        }，5000）；
+                    clearInterval(obj)；    清空定时器
+
+
+
+    事件
+        onclick, onblur, onfocus, onmouseover, onmouseout
+
+        行为      样式      结构      相分离的页面？
+        js        css       html
+
+        绑定事件的两种方式：
+            直接标签绑定  onclick='xxx()'
+            先获取DOM对象，然后在进行绑定
+                document.getElementById('xx').onclick
+                document.getElementById('xx').onfocus
+
+        this,当前触发事件的标签
+            a、
+                <input type='button' onclick='C(this)'/>
+                function C(self){
+                    // self 当前点击的标签
+                }
+
+            b、
+                <input id="i1" type='button'/>
+                document.getElementById("i1").onclick = function(){
+                    // this 代指当前点击的标签
+                }
+
+
+
+

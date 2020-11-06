@@ -58,5 +58,46 @@ eval
 
     函数的作用域在函数未被之前，已经创建
     函数的作用域存在作用域链，并且也是在调用之前创建
+    函数内局部变量提前声明
 
+JavaScript面向对象
+    function foo(){
+        var xo = 'qwe';
+    }
+    foo()
 
+    function Foo(n){
+        this.name = n;
+        this.sayName = function(){
+            console.log(this.name);
+        }
+    }
+
+    var obj1 = new Foo('we');
+    obj1.name
+    obj1.sayName()
+
+    var obj2 = new Foo('wee');
+    obj2.name
+    obj2.sayName()
+
+    a、this代指对象(相当于 python self)
+    b、创建对象时，new 函数()
+
+    原型：
+        function Foo(n){
+            this.name = n;
+        }
+
+        #Foo的原型
+        Foo.prototype = {
+            "sayName": function(){
+                console.log(this.name)
+            }
+        }
+
+        obj1 = new Foo('we');
+        obj1.sayName()
+
+        obj2 = new Foo('wee');
+        obj2.sayName()

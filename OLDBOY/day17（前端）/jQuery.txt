@@ -1,0 +1,15 @@
+jQuery
+    http://jquery.cuishifeng.cn/
+
+    模块 《=》类库
+	DOM/BOM/JavaScript的类库
+
+	一、查找元素
+        DOM
+			10左右
+		jQuery：
+            选择器，直接找到某个或者某类标签
+
+
+
+	二、操作元素
