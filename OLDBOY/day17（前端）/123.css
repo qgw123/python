@@ -1,0 +1,26 @@
+.hide{
+    display: none;
+}
+
+.modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    height: 400px;
+    width: 500px;
+    margin-left: -250px;
+    margin-top: -200px;
+    background-color: #eeeeee;
+    z-index: 10;
+}
+
+.shadow{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 9;
+}

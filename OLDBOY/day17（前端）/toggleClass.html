@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .cc1{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 32px;
+            bottom: 0;
+            background-color: #2459a2;
+        }
+    </style>
+</head>
+<body>
+    <input  id="i1" type="button" value="开/关灯" />
+    <div class="c1 hide cc1" ></div>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $("#i1").click(function(){
+            // if($(".c1").hasClass('hide')){
+            //     $('.c1').removeClass('hide');
+            //
+            // }else{
+            //     $('.c1').addClass('hide');
+            // }
+
+            $(".c1").toggleClass('hide ');
+        })
+    </script>
+</body>
+</html>

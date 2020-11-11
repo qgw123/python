@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .menu{
+            height: 40px;
+            line-height: 40px;
+            background-color: #eeeeee;
+        }
+        .active{
+            background-color: brown;
+        }
+        .menu .menu-item{
+            float: left;
+            border-right: 1px solid red;
+            padding:    0 50px;
+        }
+        .content{
+            border: 1px solid red;
+            min-height:   250px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 980px; margin: 0 auto">
+        <div class="menu">
+            <div class="menu-item active" >王者荣耀</div>
+            <div class="menu-item " >和平精英</div>
+            <div class="menu-item " >英雄联盟</div>
+        </div>
+
+        <div class="content">
+            <div >《王者荣耀》是腾讯第一5V5团队公平竞技手游，国民MOBA手游大作！5V5王者峡谷、公平对战、还原MOBA经典体验；契约之战、五军对决、边境突围等，带来花式作战乐趣！10秒实时跨区匹配，与好友开黑上分，向最强王者进击！多款英雄任凭选择，一血、五杀、超神，实力碾压，收割全场！敌军即将到达战场，王者召唤师快来集结好友，准备团战，就在《王者荣耀》！</div>
+            <div class="hide" >“《和平精英》是腾讯光子工作室群自研打造的反恐军事竞赛体验手游。虚幻引擎4研发，次世代完美画质，极致视听感受；超大实景地图，打造指尖战场，全方面自由施展战术；百人同场竞技，真实弹道，完美的射击手感；好友一键组队，语音开黑；腾讯光子工作室群超过300人团队研发，给您带来一场震撼的竞技体验。”</div>
+            <div class="hide" >《英雄联盟》（简称LOL）是由美国拳头游戏（Riot Games）开发、中国大陆地区腾讯游戏代理运营的英雄对战MOBA竞技网游。游戏里拥有数百个个性英雄，并拥有排位系统、符文系统等特色养成系统。《英雄联盟》致力于推动全球电子竞技的发展，除了联动各赛区发展职业联赛、打造电竞体系之外，每年还会举办“季中冠军赛”“全球总决赛”“All Star全明星赛”三大世界级赛事，形成了自己独有的电子竞技文化。</div>
+        </div>
+    </div>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(".menu-item").click(function(){
+            $(this).addClass('active').siblings().removeClass('active')
+            var v = $(this).index();
+            $(".content").children().eq(v).removeClass('hide').siblings().addClass("hide")
+        })
+    </script>
+</body>
+</html>

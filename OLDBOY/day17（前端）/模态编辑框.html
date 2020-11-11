@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .modal{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            width: 500px;
+            height: 400px;
+            margin-left: -250px;
+            margin-top: -250px;
+            background-color: #dddddd;
+            z-index: 10;
+        }
+        .shadow{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 9;
+        }
+        .toty{
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <input  type="button" value="添加" onclick="addElement();"/>
+    <a onclick="addElement();">添加</a>
+    <table border="1" id="tb">
+        <tr >
+            <td target="hostname">1.1.1.1</td>
+            <td target="port">80</td>
+            <td target="ip">80</td>
+            <td>
+                <a class="edit">编辑</a>
+                <a class="del">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td target="hostname">2.2.2.2</td>
+            <td target="port">3306</td>
+            <td target="ip">80</td>
+            <td>
+                <a class="edit">编辑</a>
+                <a class="del">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td target="hostname">3.3.3.3</td>
+            <td target="port">1024</td>
+            <td target="ip">80</td>
+            <td>
+                <a class="edit">编辑</a>
+                <a class="del">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td target="hostname">4.4.4.4</td>
+            <td target="port">8080</td>
+            <td target="ip">80</td>
+            <td>
+                <a class="edit">编辑</a>
+                <a class="del">删除</a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="modal hide">
+        <div>
+            <input  name="hostname" type="text"/>
+            <input  name="port" type="text"/>
+            <input  name="ip" type="text" />
+        </div>
+        <div>
+            <input type="button" value="取消" onclick="cancleModal();"/>
+            <input type="button" value="确定" onclick="confirmModal();"/>
+        </div>
+    </div>
+
+    <div class="shadow hide"> </div>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $('.del').click(function(){
+            $(this).parent().parent().remove();
+        })
+
+        function addElement() {
+            $(".modal, .shadow").removeClass('hide');
+        }
+
+        function cancleModal(){
+            $('.modal , .shadow').addClass('hide');
+            $('.modal input[type="text"]').val("");
+        }
+
+        function confirmModal(){
+            var tr = document.createElement('tr');
+            var td1 = document.createElement('td');
+            td1.innerHTML = '6.6.6.6';
+            var td2 = document.createElement('td');
+            td2.innerHTML = '3306';
+
+
+            $(tr).append(td1);
+            $(tr).append(td2);
+            $('#tb').append(tr);
+            $('.modal, .shadow').addClass('hide')
+        }
+
+        $(".edit").click(function(){
+            $(".modal, .shadow").removeClass('hide');
+            // this
+            var tds = $(this).parent().prevAll();
+            tds.each(function () {
+                // 获取td的target属性值
+                var n = $(this).attr('target');
+                // 获取td中的内容
+                var text = $(this).text();
+                var a1 = '.modal input[name="';
+                var a2 = '"]';
+                var temp = a1 + n + a2;
+                $(temp).val(text);
+
+            });
+
+            // var port = $(tds[0]).text();
+            // var host = $(tds[1]).text();
+            // $('.modal input[name="hostname"]').val(host);
+            // $('.modal input[name="port"]').val(port);
+        })
+    </script>
+</body>
+</html>

@@ -115,9 +115,75 @@ jQuery
                 $(...).html()               #获取标签和内容
                 $(...).html('<a>11</a>')    #设置标签和内容
 
-                $(..).val()
-				$(..).val(..)
+                $(..).val()                 #获取里面的值
+				$(..).val(..)               #设置
 
+
+    		样式操作：
+    		    addClass
+				removeClass
+				toggleClass
+
+			属性操作：
+			    # 专门用于做自定义属性
+				$(..).attr('n')
+				$(..).attr('n','v')
+				$(..).removeAttr('n')
+
+				# 专门用于checkbox,radio
+				$(..).prop('checked')
+				$(..).prop('checked', true) #false | true
+
+				PS:
+				    index 获取索引位置
+
+		    文档处理：
+		        1、添加
+		            append
+				    prepend
+				    after
+				    before
+
+                2、删除
+				    remove
+				    empty
+
+                3、复制/克隆
+				    clone
+
+            css处理
+                $('t1').css('样式名称', '样式值')
+                点赞：
+                    - $('t1').append()
+				    - $('t1').remove()
+				    - setInterval
+				    - 透明度 1 》 0
+				    - position
+				    - 字体大小，位置
+
+
+            位置：
+                $(window).scrollTop()  获取
+			    $(window).scrollTop(0) 设置
+			    scrollLeft([val])
+
+			    offset().left                 指定标签在html中的坐标
+			    offset().top                  指定标签在html中的坐标
+
+			    position() 	                  指定标签相对父标签(relative)标签的坐标
+			    <div style='relative'>
+			    	<div>
+					    <div id='i1' style='position:absolute;height:80px;border:1px'></div>
+				    </div>
+			    </div>
+
+
+                $('i1').height()           # 获取标签的高度 纯高度
+                $('i1').innerHeight()      # 获取边框 + 纯高度 + ？
+                $('i1').outerHeight()      # 获取边框 + 纯高度 + ？
+                $('i1').outerHeight(true)  # 获取边框 + 纯高度 + ？
+
+                # 纯高度，边框，外边距，内边距
 
 
 
