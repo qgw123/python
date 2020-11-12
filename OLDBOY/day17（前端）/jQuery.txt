@@ -185,6 +185,53 @@ jQuery
 
                 # 纯高度，边框，外边距，内边距
 
+            事件
+                DOM: 三种绑定方式
+                jQuery
+                    $('.c1').click()
+					$('.c1').....
+
+					$('.c1').bind('click',function(){
+
+					})
+
+					$('.c1').unbind('click',function(){
+
+					})
+
+					*******************委托*****************
+					$('.c').delegate('a', 'click', function(){
+
+					})
+					$('.c').undelegate('a', 'click', function(){
+
+					})
+
+					$('.c1').on('click', function(){
+
+					})
+					$('.c1').off('click', function(){
+
+					})
+
+				阻止事件发生
+				    return false
+
+				# 当页面框架加载完成之后，自动执行
+				    $(function(){
+					    $(...)
+				    })
+
+            jQuery扩展：
+                - $.extend        $.方法
+                - $.fn.extend     $(..).方法
+
+                (function(){
+                    var status = 1;
+                    // 封装变量
+                })(jQuery)
+
+
 
 
 	二、操作元素

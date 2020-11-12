@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input  id='a1' type="text" />
+    <input  id="t1" type="button" value="添加"/>
+
+    <ul  id="u1">
+        <li>1</li>
+        <li>2</li>
+    </ul>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $('#t1').click(function(){
+            var v = $('#a1').val();
+            var tag = "<li>" + v + '</li>';
+            $('#u1').append(tag);
+        })
+
+        // $('#u1 li').click(function () {
+        //     var v = $(this).text()
+        //     alert(v)
+        // })
+
+        //$('ul li').bind('click',function () {
+       //     var v = $(this).text();
+       //     alert(v);
+       // })
+
+        //$('ul li').on('click', function () {
+       //     var v = $(this).text();
+       //     alert(v);
+       // })
+
+        //委托
+        $('#u1 ').delegate('li','click',function(){     //委托
+            var v = $(this).text()
+            alert(v)
+        })
+    </script>
+</body>
+</html>
