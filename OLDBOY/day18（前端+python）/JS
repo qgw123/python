@@ -1,0 +1,108 @@
+JS正则
+    test   - 判断字符串是否符合规定的正则
+        rep = /\d+/;
+        rep.test("asdfoiklfasdf89asdfasdf")
+
+        rep = /^\d+$/;
+		rep.test("asdfoiklfasdf89asdfasdf")
+		# true
+
+    exec     - 获取匹配的数据
+        rep = /\d+/;
+        str = 'wangshen_67_houyafa_20'
+        rep.exec(str)
+            #["67"]
+
+        JavaScript is more fun than Java or JavaBeans!
+        var pattern = /\bJave(\w*)\b/;
+            #["JavaScript", "Script"]
+
+        JavaScript is more fun than Java or JavaBeans!
+        var pattern = /\bJava\w*\b/g;       # g : 全局匹配，一个一个出现
+            # ["JavaScript"]
+            # ["Java"]
+            # ["JavaBeans"]
+            # null
+
+        JavaScript is more fun than Java or JavaBeans!
+		var pattern = /\bJava(\w*)\b/g;
+            # ["JavaScript",'Script']
+            # ["Java", ""]
+            # ["JavaBeans", "Beans"]
+            # null
+
+        多行匹配：
+            默认就是多行匹配
+            ^$
+
+登录注册验证
+         默认事件先执行：
+			checkbox
+		自定义先执行
+			a
+			submit
+			...
+
+        <form>
+
+			<input type='type' />
+			<input type='password' />
+			<input type='submit' />
+
+		</form>
+
+        $(':submit').click(function(){
+
+			$(':text,:password').each(function(){
+				...
+				return false;
+			})
+			return false;
+		})
+
+		input,checbox
+
+
+================================== 验证 ================================
+	JS： 验证
+            各种验证
+                $(':submit').click(function(){
+
+				$(':text,:password').each(function(){
+					...
+					return false;
+				})
+				return false;
+			    })
+
+	后端：python实现
+
+	业务处理
+	....
+
+
+组件：
+    BootStrap
+            - css
+            - js
+    学习 BootStrap 规则
+
+        一、响应式
+                @media
+
+        二、图标、字体
+                @font-face
+
+        三、基本使用
+
+    ========》 后台管理
+    jQueryUI *
+            - css
+		    - js
+    学习 jQueryUI 规则
+
+    EasyUI
+            - css
+            - js
+    学习 jQueryUI 规则
+
