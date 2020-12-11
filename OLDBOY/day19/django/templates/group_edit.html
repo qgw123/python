@@ -14,8 +14,8 @@
     </style>
 </head>
 <body>
-       <div style="height: 48px;background-color: red;color: black">
-        详细信息
+       <div style="height: 48px;background-color: red;color: black;line-height: 48px">
+        用户管理页面
     </div>
     <div>
         <div style="position: absolute;top:48px;bottom: 0;left: 0;width: 200px;background-color: antiquewhite ;">
@@ -23,7 +23,14 @@
             <a class="menu" href="/cmdb/user_group/">用户组管理</a>
         </div>
         <div style="position:absolute;top:48px;left: 210px;bottom: 0;right: 0;overflow: auto">
-
+            <h3>用户组编辑</h3>
+            <form method="post" action="/cmdb/groupedit-{{ obj.uid }}">
+                <input style="display: none" type="text" name="uid" value='{{ obj.uid }} '/>
+                用户组名：<input type="text" name="groupname" value='{{ obj.caption }}'/>
+                创建时间：<input type='text' name="ctime" value='{{ obj.ctime }}'/>
+                更新时间：<input type='text' name="uptime" value='{{ obj.uptime }}'/>
+                <input type="submit" value="提交"/>
+            </form>
 
 
         </div>

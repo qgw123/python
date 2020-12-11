@@ -14,8 +14,8 @@
     </style>
 </head>
 <body>
-       <div style="height: 48px;background-color: red;color: black">
-        详细信息
+       <div style="height: 48px;background-color: red;color: black; line-height: 48px">
+        用户管理页面
     </div>
     <div>
         <div style="position: absolute;top:48px;bottom: 0;left: 0;width: 200px;background-color: antiquewhite ;">
@@ -23,9 +23,11 @@
             <a class="menu" href="/cmdb/user_group/">用户组管理</a>
         </div>
         <div style="position:absolute;top:48px;left: 210px;bottom: 0;right: 0;overflow: auto">
-
-
-
+            <h2>用户组详细信息</h2>
+            <h5>id : {{ obj.uid }}</h5>
+            <h5>caption: {{ obj.caption }}</h5>
+            <h5>ctime: {{ obj.ctime }}</h5>
+            <h5>uptime:{{ obj.uptime }}</h5>
         </div>
 
     </div>

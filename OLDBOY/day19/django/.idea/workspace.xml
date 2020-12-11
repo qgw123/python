@@ -19,31 +19,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="828d1ac5-5b73-45e3-8693-bfa6bff114df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../day18/Django.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../day18/Django/.idea/Django.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../day18/Django/static/commons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../day18/Django/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../day18/Django/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/day19.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Django.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day18/web/web.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../day18/web/web.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../work/randpass1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../work/randpass1.py" afterDir="false" />
+    <list default="true" id="828d1ac5-5b73-45e3-8693-bfa6bff114df" name="Default Changelist" comment="django">
+      <change afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views.bak.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app02/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/group_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/group_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/group_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.bak.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.bak.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,6 +51,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../../.." value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="1lP2NSbrS84Pboeg4yAdtYuZdyn" />
@@ -69,6 +72,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\python\OLDBOY\day19\Django\templates" />
+      <recent name="C:\Users\Administrator\Desktop\python\OLDBOY\day19\Django\app" />
+      <recent name="C:\Users\Administrator\Desktop\python\OLDBOY\day19\Django\app02" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Django" type="Python.DjangoServer" factoryName="Django server">
@@ -85,7 +96,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8001" />
+      <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
@@ -106,8 +117,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607484365377</updated>
-      <workItem from="1607484366896" duration="13210000" />
+      <workItem from="1607484366896" duration="42614000" />
     </task>
+    <task id="LOCAL-00001" summary="django">
+      <created>1607504367814</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607504367814</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,45 +143,46 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="django" />
+    <option name="LAST_COMMIT_MESSAGE" value="django" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="597" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607485062674">
+    <state x="597" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607566944403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="597" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607485062674" />
-    <state width="1212" height="249" key="GridCell.Tab.0.bottom" timestamp="1607503594495">
+    <state x="597" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607566944403" />
+    <state width="1212" height="249" key="GridCell.Tab.0.bottom" timestamp="1607675165594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1212" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607503594495" />
-    <state width="1212" height="249" key="GridCell.Tab.0.center" timestamp="1607503594495">
+    <state width="1212" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607675165594" />
+    <state width="1212" height="249" key="GridCell.Tab.0.center" timestamp="1607675165594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1212" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607503594495" />
-    <state width="1212" height="249" key="GridCell.Tab.0.left" timestamp="1607503594495">
+    <state width="1212" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607675165594" />
+    <state width="1212" height="249" key="GridCell.Tab.0.left" timestamp="1607675165594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1212" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607503594495" />
-    <state width="1212" height="249" key="GridCell.Tab.0.right" timestamp="1607503594495">
+    <state width="1212" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607675165594" />
+    <state width="1212" height="249" key="GridCell.Tab.0.right" timestamp="1607675165594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1212" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607503594495" />
+    <state width="1212" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607675165594" />
+    <state x="767" y="270" key="Vcs.Push.Dialog.v2" timestamp="1607504505921">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="767" y="270" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607504505921" />
+    <state x="755" y="333" key="git4idea.merge.GitMergeDialog" timestamp="1607504491792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="755" y="333" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607504491792" />
     <state x="892" y="324" key="git4idea.merge.GitPullDialog" timestamp="1607504276559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="892" y="324" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607504276559" />
-    <state x="862" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1607494835966">
+    <state x="862" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1607673763087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="862" y="243" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607494835966" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/views.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="862" y="243" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607673763087" />
   </component>
 </project>
