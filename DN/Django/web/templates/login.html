@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pg-header{
+            background-color: aliceblue;
+            height: 50px;
+            line-height: 80px;
+        }
+        .hide{
+            display: none;
+         }
+        .shade{
+            position: fixed;
+            background-color: black;
+            opacity: 0.6;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+        }
+        .c3, .c4{
+            background-color: aliceblue;
+            height: 300px;
+            float: left;
+            width:980px;
+            z-index: 101;
+        }
+        .c2{
+            background-color: #dddddd;
+            height: 39px;
+            line-height: 39px;
+            font-weight:bold;
+            text-align:center;
+        }
+        .add-modal, .edit_modal{
+            position: fixed;
+            height: 300px;
+            width: 400px;
+            left: 50%;
+            margin-left: -200px;
+            top: 150px;
+            z-index: 101;
+            border: 1px solid red;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body style="margin: 0">
+    <div class="pg-header"></div>
+        <div style="width: 980px;margin: 0 auto;" >
+
+            <div class="c2" >欢迎使用</div>
+                <div  class="c3  ">
+                    <h1 style="color: red;font-family: '仿宋_GB2312',Georgia,Serif;text-align:center">登录页面</h1>
+                    <form method="post" action="/login/">
+                        <p style="text-align:center"> <input  type="text" name="username" placeholder="用户名"/></p>
+                        <p style="text-align:center"><input  type="password" name="pwd" placeholder="密码"/></p>
+                        <p style="text-align:center"><input type="submit" value="提交"/>
+                        <input id="a1" type="button" value="注册"/></p>
+                </form>
+                </div>
+            </div>
+                <div class="shade hide"></div>
+                <div class="add-modal hide">
+                    <h1 style="color: red;font-family: '仿宋_GB2312',Georgia,Serif;text-align:center">注册页面</h1>
+                    <form method="post" action="/register/">
+                        <p style="text-align:center"> <input  type="text" name="username" placeholder="用户名"/>{{ obj.user.errors.0 }}</p>
+                        <p style="text-align:center"><input  type="password" name="pwd" placeholder="密码"/>{{ obj.pwd.errors.0 }}</p>
+                        <p style="text-align:center"><input type="submit" value="确定"/>
+                        <input  id="cancal" type="button"value="取消"/> </p>
+                </form>
+                </div>
+
+
+
+    <script src="/static/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $('#a1').click(function () {
+                $('.shade, .add-modal').removeClass('hide')
+            });
+            $('#cancal').click(function () {
+                $('.shade, .add-modal').addClass('hide');
+            });
+
+        })
+    </script>
+
+</body>
+</html>

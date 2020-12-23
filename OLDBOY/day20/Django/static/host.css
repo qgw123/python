@@ -1,0 +1,33 @@
+.hide{
+    display: none;
+}
+
+.shade{
+    position: fixed;
+    background-color: black;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.add-modal{
+    position: fixed;
+    height: 300px;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    top: 150px;
+    z-index: 101;
+    border: 1px solid red;
+    background-color: bisque;
+}
+
+.ajaxcss{
+    display: inline-block;
+    padding: 5px;
+    background: yellowgreen;
+    color: red;
+}

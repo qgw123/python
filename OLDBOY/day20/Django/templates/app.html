@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>应用列表</title>
+    <style>
+        .host_tag{
+            display: inline-block;
+            padding: 3px;
+            border: 1px solid red;
+            background-color: antiquewhite;
+        }
+        .hide{
+            display: none;
+        }
+        .shade{
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: black;
+            opacity: 0.6;
+            z-index: 100;
+        }
+        .add-modal,.edit-modal{
+            position: fixed;
+            height: 300px;
+            width: 400px;
+            top:100px;
+            left: 50%;
+            z-index: 101;
+            border: 1px solid red;
+            background: white;
+            margin-left: -200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>应用列表</h1>
+    <div>
+        <input id="add_app" type="button" value="添加" />
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>应用名称</th>
+                <th>应用主机列表</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in app_list %}
+            <tr aid="{{ row.id }}">
+                <td>{{ row.name }}</td>
+                <td>
+                    {% for app in row.r.all  %}
+                        <span class="host_tag" hid="{{ app.id }}" h_name="{{ row.name }}">{{ app.hostname }}</span>
+                    {% endfor %}
+                </td>
+                <td><a class="edit">编辑</a> | <a class="del" href="/appdel-{{ row.id }}">删除</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="shade hide"></div>
+    <div class="add-modal hide">
+        <form id="add_form" method="post" action="/app/">
+        <div class="group">
+            <input id="app_list" type="text" placeholder="应用名称" name="app_name"/>
+        </div>
+        <div class="group">
+            <select id="host_lsit" name="host_list" multiple>
+                {% for op in host_list %}
+                <option  value="{{ op.id }}"> {{ op.hostname }}</option>
+                {% endfor %}
+            </select>
+        </div>
+            <input type="submit" value="添加"/>
+            <input id="add_submit_ajax" type="button" value="Ajax提交" />
+            <input id="cancet" type="button" value="取消"/>
+        </form>
+    </div>
+
+    <div class="edit-modal hide">
+        <form id="edit_form" method="post" action="/app">
+            <input type="text" name="nid"  style="display: none" />
+            <input type="text" placeholder="应用名称" name="app"/>
+            <select name="host_list" multiple>
+                {% for op in host_list %}
+                    <option value="{{ op.id }}">{{ op.hostname }}</option>
+                {% endfor %}
+            </select>
+            <a id="ajax_submit_edit">确认编辑</a>
+            <input  id="zz" type="button" value="取消" />
+
+        </form>
+    </div>
+
+    <script src="/static/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $('#add_app').click(function () {
+                $('.shade, .add-modal').removeClass('hide')
+            });
+            $('#cancet').click(function () {
+                $('.shade, .add-modal').addClass('hide')
+            });
+            $('#add_submit_ajax').click(function () {
+                $.ajax({
+                    url: '/ajax_add_app/',
+                    type: 'POST',
+                    data: $('#add_form').serialize(),
+                    dataType: 'JSON',
+                    traditional: true,
+                    success:function(obj) {
+                        console.log(obj);
+                        if(obj.status) {
+                            location.reload();
+                        }else {
+                            alert(obj.error);
+                        }
+                    },
+                    error:function () {
+
+                    }
+                })
+            });
+            $('.edit').click(function () {
+                $('.edit-modal, .shade').removeClass('hide');
+
+                var hid_list = [];
+                $(this).parent().prev().children().each(function() {
+                    var hid = $(this).attr('hid');
+                    hid_list.push(hid);
+                });
+                 $(this).parent().prev().children().each(function () {
+                    var h_name = $(this).attr('h_name');
+                    $('#edit_form').find('input[name="app"]').val(h_name);
+                    console.log(h_name);
+                 })
+                    console.log(hid_list);
+            })
+            $('#zz').click(function () {
+                $('.shade, .edit-modal').addClass('hide');
+            });
+            $('#ajax_submit_edit').click(function () {
+                $.ajax({
+                    url: '/ajax_edit_app/',
+                    type: 'POST',
+                    data: $('#add_form').serialize(),
+                    dataType: 'JSON',
+                    traditional: true,
+                    success:function(obj) {
+                        console.log(obj)
+                    }
+
+                })
+            })
+        })
+    </script>
+</body>
+</html>

@@ -19,21 +19,232 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="828d1ac5-5b73-45e3-8693-bfa6bff114df" name="Default Changelist" comment="django">
-      <change afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views.bak.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app02/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/group_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/group_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/group_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.bak.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.bak.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user_info.html" afterDir="false" />
+    <list default="true" id="828d1ac5-5b73-45e3-8693-bfa6bff114df" name="Default Changelist" comment="commit">
+      <change afterPath="$PROJECT_DIR$/../../../DN/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/.idea/DN.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/.idea/web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/app/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/Gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/images/bx_loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/images/controls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/images/pic1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/images/pic2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/images/pic3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/jquery-3.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/jquery.bxslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/jquery.bxslider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/jquery.bxslider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/jquery.bxslider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/vendor/jquery.easing.1.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/dist/vendor/jquery.fitvids.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/bx-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/photo1-cropped.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/photo1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/photo2-cropped.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/photo2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/photo3-cropped.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/photo3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/photo4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/photo5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/img/photo6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/less/docs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/vendors/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/assets/vendors/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/layouts/demos.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/layouts/docs.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/layouts/home.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/adaptiveHeight.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/autoplay.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/basic.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/callbacks.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/captions.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/carousel.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/customPager.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/demos.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/destroy.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/fade.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/manual.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/shrinkItems.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/ticker.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/touch.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/demos/vertical.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/docs/options.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/pages/index.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/partials/footer.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/partials/head.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/partials/header.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/partials/home-carousel.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/partials/home-features.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/partials/home-hero.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/partials/javascripts.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/docs_src/templates/partials/title.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/src/css/jquery.bxslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/src/images/bx_loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/src/images/controls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/src/js/jquery.bxslider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/src/vendor/jquery.easing.1.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/bxslider-4-master/src/vendor/jquery.fitvids.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/coffee1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/coffee2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/coffee3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/jquery-1.12.4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/static/jquery.bxslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/Gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/images/bx_loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/images/controls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/images/pic1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/images/pic2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/images/pic3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/jquery-3.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/jquery.bxslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/jquery.bxslider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/jquery.bxslider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/jquery.bxslider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/vendor/jquery.easing.1.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/dist/vendor/jquery.fitvids.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/bx-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/photo1-cropped.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/photo1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/photo2-cropped.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/photo2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/photo3-cropped.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/photo3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/photo4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/photo5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/img/photo6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/less/docs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/vendors/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/assets/vendors/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/layouts/demos.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/layouts/docs.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/layouts/home.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/adaptiveHeight.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/autoplay.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/basic.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/callbacks.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/captions.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/carousel.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/customPager.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/demos.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/destroy.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/fade.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/manual.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/shrinkItems.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/ticker.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/touch.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/demos/vertical.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/docs/options.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/pages/index.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/partials/footer.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/partials/head.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/partials/header.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/partials/home-carousel.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/partials/home-features.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/partials/home-hero.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/partials/javascripts.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/docs_src/templates/partials/title.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/src/css/jquery.bxslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/src/images/bx_loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/src/images/controls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/src/js/jquery.bxslider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/src/vendor/jquery.easing.1.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/bxslider-4-master/src/vendor/jquery.fitvids.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/Django/web/templates/polls.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DN/多进程/tcp_time_server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day20/Django/.idea/Django.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day20/Django/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day20/Django/static/host.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day20/Django/templates/app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day20/Django/templates/bussiss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day20/Django/templates/eehost.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day20/Django/templates/host.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day20/Django/templates/html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/.idea/Day21.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/app/templatetags/qgw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/templates/li.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/templates/master.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/templates/tmp1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/templates/tmp2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/templates/tmp3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/templates/tmp4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/templates/user_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day21/Day21/utils/pagination.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/.idea/Day22.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/Middle/m1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/app/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/app/templatetags/fm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/sg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/templates/cache.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/templates/fm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day22/Day22/utils/fm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_info.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +283,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -117,7 +328,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607484365377</updated>
-      <workItem from="1607484366896" duration="42614000" />
+      <workItem from="1607484366896" duration="43133000" />
+      <workItem from="1607918174678" duration="5236000" />
+      <workItem from="1608690211091" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1607504367814</created>
@@ -126,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607504367814</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <created>1607675464007</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607675464007</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,36 +362,42 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="django" />
-    <option name="LAST_COMMIT_MESSAGE" value="django" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="597" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607566944403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="597" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607566944403" />
-    <state width="1212" height="249" key="GridCell.Tab.0.bottom" timestamp="1607675165594">
+    <state x="788" y="299" key="FileChooserDialogImpl" timestamp="1607675669434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1212" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607675165594" />
-    <state width="1212" height="249" key="GridCell.Tab.0.center" timestamp="1607675165594">
+    <state x="788" y="299" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607675669434" />
+    <state width="1212" height="249" key="GridCell.Tab.0.bottom" timestamp="1608080973182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1212" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607675165594" />
-    <state width="1212" height="249" key="GridCell.Tab.0.left" timestamp="1607675165594">
+    <state width="1212" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608080973182" />
+    <state width="1212" height="249" key="GridCell.Tab.0.center" timestamp="1608080973182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1212" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607675165594" />
-    <state width="1212" height="249" key="GridCell.Tab.0.right" timestamp="1607675165594">
+    <state width="1212" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608080973182" />
+    <state width="1212" height="249" key="GridCell.Tab.0.left" timestamp="1608080973182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1212" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607675165594" />
-    <state x="767" y="270" key="Vcs.Push.Dialog.v2" timestamp="1607504505921">
+    <state width="1212" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608080973182" />
+    <state width="1212" height="249" key="GridCell.Tab.0.right" timestamp="1608080973182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="767" y="270" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607504505921" />
+    <state width="1212" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608080973182" />
+    <state x="767" y="270" key="Vcs.Push.Dialog.v2" timestamp="1607675472396">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="767" y="270" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607675472396" />
     <state x="755" y="333" key="git4idea.merge.GitMergeDialog" timestamp="1607504491792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

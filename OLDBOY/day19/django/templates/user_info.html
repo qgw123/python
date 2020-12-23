@@ -28,9 +28,9 @@
                 <input  type="text" name="user" placeholder="用户名"/>
                 <input  type="text" name="pwd" placeholder="密码"/>
                 <input  type="text" name="email" placeholder="邮箱"/>
-                <select>
+                <select name="group">
                     {% for item in group_list %}
-                        <option  value="{{ item.id }}">{{ item.caption }}</option>
+                        <option  value="{{ item.uid }}">{{ item.caption }}</option>
                     {% endfor %}
                 </select>
                 <input  type="submit" value="添加" />

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pagination .page{
+            display: inline-block;
+            padding: 5px;
+            background-color: cyan;
+            margin: 5px;
+        }
+        .pagination .page.active{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        {% for item in li %}
+            {% include 'li.html' %}
+        {% endfor %}
+    </ul>
+
+    <div>
+        <select id="ps" onchange="changePageSize(this)">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+        </select>
+    </div>
+
+    <div class="pagination">
+{#        <a href="/user_list/?p=1">1</a>#}
+{#        <a href="/user_list/?p=2">2</a>#}
+{#        <a href="/user_list/?p=3">3</a>#}
+        {{ page_str }}
+    </div>
+     跳转到：<input  style=" width: 40px" type="text" /><a onclick="jumpTo(this, '/user_list/?p=')">GO</a>
+    <script src="/static/jquery-1.12.4.js"></script>
+    <script src="/static/jquery.cookie.js"></script>
+    <script>
+        $(function(){
+                var v = $.cookie('per_page_count');
+                $('#ps').val(v);
+                console.log(v);
+        });
+
+        function changePageSize(ths){
+            var v = $(ths).val();
+            console.log(v);
+            $.cookie('per_page_count',v, {'path': "/user_list/"});
+
+            location.reload();
+        }
+{#    </script>#}
+{#    <script>#}
+        function jumpTo(ths ,base) {
+                var val = ths.previousElementSibling.value;
+                if(val == '') {
+                    location.href = base + val;
+                    alert('跳转页数不用为空')
+                    location.reload();
+                }else{
+                    location.href = base + val;
+                    location.reload();
+                }
+        }
+    </script>
+</body>
+</html>

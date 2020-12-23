@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .shade{
+            position: fixed;
+            background-color: black;
+            opacity: 0.6;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+        }
+        .add-modal{
+            position: fixed;
+            height: 300px;
+            width: 400px;
+            left: 50%;
+            margin-left: -200px;
+            top: 150px;
+            z-index: 101;
+            border: 1px solid red;
+            background-color: bisque;
+        }
+        .ajaxcss{
+            display: inline-block;
+            padding: 5px;
+            background: yellowgreen;
+            color: red;
+        }
+    </style>
+</head>
+<body >
+    <h1>主机列表（对象）</h1>
+    <div>
+        <input id="add_host" type="button" value="添加"/>
+    </div>
+    <div>
+        <input id="edit_host" type="button" value="编辑" />
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>主机名</th>
+                <th>IP地址</th>
+                <th>端口号</th>
+                <th>所属部门</th>
+                <th>部门英文</th>
+            </tr>
+        </thead>
+
+        <tbody >
+        {% for row in v1 %}
+            <tr host_id="{{ row.id }}" buss_id="{{ row.buss_id }}">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ row.hostname  }}</td>
+                <td>{{ row.ip }}</td>
+                <td>{{ row.port }}</td>
+                <td>{{ row.buss.caption }}</td>
+                <td>{{ row.buss.code }}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+    <h1>主机列表（字典）</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>主机名</th>
+                <th>IP地址</th>
+                <th>所属部门</th>
+            </tr>
+        </thead>
+
+        <tbody >
+        {% for row in v2 %}
+            <tr host_id="{{ row.id }}" buss_id="{{ row__buss_id }}">
+                <td>{{ row.hostname  }}</td>
+                <td>{{ row.ip }}</td>
+                <td>{{ row.buss__caption }}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+    <h1>主机列表（元组）</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>主机名</th>
+                <th>IP地址</th>
+                <th>所属部门</th>
+            </tr>
+        </thead>
+
+        <tbody >
+        {% for row in v3 %}
+            <tr host_id="{{ row.0 }}" buss_id="{{ row.3 }}">
+                <td>{{ row.1  }}</td>
+                <td>{{ row.2 }}</td>
+                <td>{{ row.4 }}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+    <div class="shade hide"></div>
+    <div class="add-modal hide">
+        <form method="post" action="/host/">
+            <div>
+                <input id="host" type="text" name="hostname" placeholder="主机名" />
+            </div>
+            <div>
+                <input id="ip"  type="text" name="ip" placeholder="IP地址" />
+            </div>
+            <div>
+                <input id="port" type="text" name="port" placeholder="端口号" />
+            </div>
+            <div>
+                <select id="buss_id" name="buss_id">
+                    {% for op in buss_list %}
+                        <option value="{{ op.id }}">{{ op.caption }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="提交" />
+                <a id="ajax_sumbit" class="ajaxcss" >悄悄提交</a>
+                <input id="cancet" type="button" value="取消" />
+            </div>
+        </form>
+    </div>
+
+    <script src="/static/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $('#add_host').click(function(){
+                $('.shade,.add-modal').removeClass('hide');
+            });
+            $('#cancet').click(function () {
+                $('.shade, .add-modal').addClass('hide');
+            });
+            $('#ajax_sumbit').click(function () {
+                $.ajax({
+                    url: "/test_ajax/",
+                    type: "POST",
+                    data: {"hostname": $('#host').val(),
+                            "ip": $('#ip').val(),
+                            "port": $("#port").val(),
+                            "buss_id": $("#buss_id").val(),
+                    },
+                    success: function (data) {
+                        if(data == "ok"){
+                            location.reload();
+                        }else{
+                            alert(data);
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
