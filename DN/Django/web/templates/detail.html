@@ -5,7 +5,31 @@
     <title>投票详情</title>
 </head>
 <body>
-    <h1>{{ question_id }}号问题投票详情</h1>
-    <div></div>
+    <h1>问题投票详情</h1>
+    {{ question.question_text }}
+{#    <form method="post"  action="{% url 'vote' question_id=question.id %}">#}
+    <form method="post"  action="/polls/{{ question.id }}/vote/">
+        {% for choice in question.choice_set.all %}
+        <div>
+            <label>
+                <input type="radio" name="choice_id" value="{{ choice.id }}" />
+            </label>
+            {{ choice.choice_text }}
+        </div>
+    {% endfor %}
+        <input type="submit" value="提交"/>
+    </form>
+
+
+
+{#    <form method="post">#}
+{#            {% for i in ipt %}#}
+{#            <div>{{ i.choice_text }}#}
+{#            {{ i.votes }}</div>#}
+{#            <div><input type="submit" value="投票"/></div>#}
+{##}
+{#        {% endfor %}#}
+{##}
+{#    </form>#}
 </body>
 </html>

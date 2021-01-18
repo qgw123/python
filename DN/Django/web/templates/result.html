@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>问题投票结果</h1>
+    <h3>{{ question.question_text }}</h3>
+    <ul>
+    {% for choice in question.choice_set.all %}
+        <li>{{ choice.choice_text }} : {{ choice.votes }}</li>
+    {% endfor %}
+    </ul>
+    <a href="/polls/">投票首页</a>
+</body>
+</html>
